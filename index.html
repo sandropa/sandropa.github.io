@@ -3,47 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <title>Sandro Paradžik</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 40px;
-            background-color: #f5f5f5;
-            color: #333;
-        }
-        h1 {
-            font-size: 2em;
-            color: #0056b3;
-        }
         nav {
-            margin-top: 20px;
+            background-color: #333;
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly more pronounced shadow */
+            position: fixed;                   /* Fixes the navbar to the top of the viewport */
+            top: 0;                           /* Aligns the navbar to the top of the page */
+            width: 100%;                       /* Ensures the navbar spans the full width of the page */
+            z-index: 1000;                    /* Ensures the navbar stays above other content */
+        }
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f0; /* Softer beige background color */
+            padding-top: 60px; /* Adds space at the top of the body to prevent content from being hidden under the fixed navbar */
         }
         nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
             text-decoration: none;
-            color: #0056b3;
-            font-size: 1.2em;
-            margin-right: 20px;
         }
-        footer {
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #777;
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            text-align: center;
+            padding: 50px;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .social-links a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #4169e1;                         /* Royal Blue color for the links */
+            font-weight: bold;                      /* Make the text bold for emphasis */
+        }
+
+        .social-links a:hover {
+            text-decoration: underline;             /* Underline the link on hover */
+            color: #27408b;                         /* Darker Royal Blue on hover */
+        }
+
+        .quote {
+            font-size: 1.5em;                    /* Slightly larger font size */
+            color: #696969;                      /* Gray color for the text */
+            margin-top: 40px;                    /* Space above the quote */
+            font-style: italic;                  /* Optional: italicize the quote */
+            text-align: center;                  /* Center align the quote */
         }
     </style>
 </head>
 <body>
-
-    <h1>Sandro Paradžik</h1>
-    <p>Exploring the intersection of machine learning, mathematics, and computational neuroscience.</p>
-    
     <nav>
-        <a href="cv.html">CV</a>
-        <a href="blog/">Blog</a> <!-- Assuming blog is in a subfolder -->
+        <a href="index.html">Home</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="blog.html">Blog</a>
     </nav>
 
-    <footer>
-        <p>Last updated on: <!-- date --> </p>
-    </footer>
+    <div class="container">
+        <img src="profile.jpg" alt="Sandro Paradžik" class="profile-pic">
+        <h1>Sandro Paradžik</h1>
+        <p>Exploring the intersection of machine learning, mathematics, computational 
+            neuroscience.</p>
 
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sandro-parad%C5%BEik-b2778b244/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/sandropa" target="_blank">GitHub</a>
+            <a href="mailto:sandro.paradzik@gmail.com">Email</a>
+        </div>
+
+        <blockquote class="quote">
+            “Nobody ever figures out what life is all about, and it doesn't matter. Explore the world. Nearly everything is really interesting if you go into it deeply enough.”
+            ― Richard P. Feynman
+        </blockquote>
+    </div>
 </body>
 </html>
