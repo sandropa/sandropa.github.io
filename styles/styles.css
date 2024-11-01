@@ -2,6 +2,10 @@
 /* https://coolors.co/d79922-efe2ba-f13c20-4056a1-c5cbe3 */
 /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Roboto';
     background-color: white;
@@ -62,13 +66,19 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0px -2px 8px #343A40;
 }
 
-.topnav a {
+.topnav * {
     float: left;
     color: black;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+}
+
+#name_nav {
+    color: #F13C20;
+    font-style: italic;
+    font-weight: bolder;
 }
   
 .topnav a:hover {
@@ -121,12 +131,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #profile_and_contact, #currently_thinking_about {
-    flex: 1 1 300px; /* Allows both sections to take equal space */
-}
-
-/* Stack vertically on narrow screens */
-@media (max-width: 768px) { /* Change 768px as needed */
-    #profile_and_thinking_container {
-        flex-direction: column; /* Stack vertically on small screens */
-    }
+    flex: 1 1 400px; /* Allows both sections to take equal space */
 }
