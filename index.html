@@ -2,13 +2,109 @@
 <html>
 <head>
 <title>Sandro Paradžik</title>
-<link rel="icon" type="image/x-icon" href="/images/icons8-avatar-16.png">
+
+<!-- https://www.w3schools.com/html/html_favicon.asp -->
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+<!-- https://www.w3schools.com/tags/att_link_rel.asp -->
+<link rel="stylesheet" href="styles/styles.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
 
-<h1>This is a heading</h1>
-<p>This is a paragraph.</p>
+<!-- <div class="sticky">I will stick to the screen when you reach my scroll position</div> -->
 
+<header class="sticky">
+<!-- https://www.w3schools.com/howto/howto_js_topnav.asp -->
+    <!-- navbar -->
+    <div class="topnav">
+        <a href="#">Home</a>
+        <a href="#about_me">About me</a>
+        <a href="#news_h1">News</a>
+        <a href="#blog">Blog</a>
+        <a href="projects">Projects</a> 
+    </div>
+</header>
+
+<main>
+    <div id="home">
+        <div id="profile_and_contact">
+            <div id="profile_image">
+                <img src="images/profile3.JPG" alt="Profile image">
+            </div>
+            <div id="profile_info">
+                Sandro Paradžik
+            </div>
+            <div id="contact">
+                <a href="mailto:sandro.paradzik@gmail.com" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://github.com/sandropa" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sandropa" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i> 
+                </a>
+                <a href="Sandro_CV.pdf".pdf" target="_blank" title="CV">
+                    CV
+                    <!-- <i class="fas fa-file-pdf"></i> -->
+                </a>
+            </div>
+        </div>
+
+        <div id="currently_thinking_about">
+            <h2>Currently thinking about</h2>
+            <ul>
+                <li>Strategic Deployment of ML</li>
+                <li>Dynamic systems of humans and AI</li>
+                <li>Dynamics of ML driven (multi-sided) platforms</li>
+                <li>Latent traits of large language models</li>
+                <li>Performative prediction</li>
+                <li>Human-AI collaboration with label noise</li>
+                <li>Human-AI collaboration with unidentifiable ground truth</li>
+                <li>Decision-making for ML deployment/training</li> 
+                <li>Measurement theory for benchmarks</li>
+                <li>Psychometrics/latent variable modelling for AI</li>
+                <li>Item response theory and test theory for benchmarks</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="about_me">
+        <h1>About me</h1>
+        <p>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+    </div>
+
+    <div class="large_quote">
+        <blockquote>
+            “If you have a high sensitivity to analogies, you will extract powerful abstractions from little experience, and you will be able to use these abstractions to operate in a maximally large area of future experience space. You will be maximally efficient in converting past experience into the ability to handle future novelty.”
+        </blockquote>
+        <cite>— François Chollet</cite>
+    </div>
+
+    <div id="news">
+    <h1 id="news_h1">News</h1>
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+    is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </div>
+</main>
+
+<footer>
+
+</footer>
 
 </body>
 </html>

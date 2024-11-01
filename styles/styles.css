@@ -1,0 +1,132 @@
+/* Colors */
+/* https://coolors.co/d79922-efe2ba-f13c20-4056a1-c5cbe3 */
+/* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
+
+body {
+    font-family: 'Roboto';
+    background-color: white;
+    margin: 0;
+}
+
+.content {
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4056A1;
+}
+
+#profile_and_contact {
+    margin-top: 60px;
+    margin-left: 10px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#profile_image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0px 2px 5px #6C757D;
+}
+
+#profile_info, #contact {
+    margin-top: 20px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#contact a {
+    margin: 0 5px; /* Add horizontal space between icons */
+    color: #6C757D;
+    font-size: 24px; /* Adjust icon size */
+    text-decoration: none; /* uklanja liniju*/
+}
+
+.sticky {
+    position: sticky;
+    top: 0;
+}
+
+/* https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sticky_header */
+
+/* https://www.w3schools.com/howto/howto_js_topnav.asp */
+.topnav {
+    background-color: white;
+    overflow: hidden; 
+    box-shadow: 0px -2px 8px #343A40;
+}
+
+.topnav a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+.topnav a:hover {
+    color: #F13C20;
+}
+#contact a:hover {
+    color: #F13C20;
+}
+
+.large_quote {
+    padding: 30px;
+    text-align: center;
+    background-color: #EFE2BA;
+    font-style: italic;
+    font-size: large;
+    box-shadow: 0px 0px 6px #ADB5BD;
+}
+
+#news {
+    margin-top: 20px;
+    padding: 30px;
+    color: #6C757D;
+    font-style: italic;
+}
+
+#about_me {
+    padding: 30px;
+}
+
+#currently_thinking_about {
+    padding: 30px;
+}
+
+#currently_thinking_about h2 {
+    color: #F13C20;
+}
+
+#currently_thinking_about li {
+    padding: 4px;
+}
+
+#currently_thinking_about li::marker {
+    color: #F13C20;
+}
+
+
+#home {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#profile_and_contact, #currently_thinking_about {
+    flex: 1 1 300px; /* Allows both sections to take equal space */
+}
+
+/* Stack vertically on narrow screens */
+@media (max-width: 768px) { /* Change 768px as needed */
+    #profile_and_thinking_container {
+        flex-direction: column; /* Stack vertically on small screens */
+    }
+}
