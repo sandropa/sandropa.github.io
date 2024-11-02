@@ -1,5 +1,5 @@
 /* Colors */
-/* https://coolors.co/d79922-efe2ba-f13c20-4056a1-c5cbe3 */
+/* https://coolors.co/d79922-efe2ba-f13c20-3872b2-c5cbe3 */
 /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
 
 * {
@@ -17,7 +17,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #4056A1;
+    /* color: #4056A1; */
+    color: #3872b2;
 }
 
 #profile_and_contact {
@@ -132,4 +133,43 @@ h1, h2, h3, h4, h5, h6 {
 
 #profile_and_contact, #currently_thinking_about {
     flex: 1 1 400px;
+}
+
+
+/* https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+td, th {
+    border: 1px solid #CED4DA;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #F8F9FA;
+}
+tr:nth-child(odd) {
+    background-color: #E9ECEF;
+}
+
+
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-columns1 */
+
+.teaching_grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+  
+.teaching_grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
 }

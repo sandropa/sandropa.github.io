@@ -1,96 +1,86 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
+.teaching_grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
 }
 
-.mobile-container {
-  max-width: 480px;
-  margin: auto;
-  background-color: #555;
-  height: 500px;
-  color: white;
-  border-radius: 10px;
+.teaching_grid > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
 }
 
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
+#logo1 {
+  grid-column: 1;
+  grid-row: 1/4;
+  background-color: red;
 }
 
-.topnav #myLinks {
-  display: none;
+#logo2 {
+  grid-column: 1;
+  grid-row: 4/7;
+  background-color: red;
 }
 
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
+#name1 {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: bisque;
 }
 
-.topnav a.icon {
-  background: black;
-  display: block;
-  position: absolute;
-  right: 0;
-  top: 0;
+#name2 {
+  grid-column: 2;
+  grid-row: 4;
+  background-color: bisque;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+#description1 {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: aquamarine;
 }
 
-.active {
-  background-color: #04AA6D;
-  color: white;
+#description2 {
+  grid-column: 2;
+  grid-row: 5;
+  background-color: aquamarine;
 }
+
+#duration1 {
+  grid-column: 2;
+  grid-row: 3;
+  background-color: aliceblue;
+}
+
+#duration2 {
+  grid-column: 2;
+  grid-row: 6;
+  background-color: aliceblue;
+}
+
 </style>
 </head>
 <body>
 
-<!-- Simulate a smartphone / tablet -->
-<div class="mobile-container">
-
-<!-- Top Navigation Menu -->
-<div class="topnav">
-  <a href="#home" class="active">Logo</a>
-  <div id="myLinks">
-    <a href="#news">News</a>
-    <a href="#contact">Contact</a>
-    <a href="#about">About</a>
-  </div>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
+<div class="teaching_grid">
+  <img id="logo1" src="/images/umks_logo2.jpg" alt="umks">
+  <div id="logo2">2</div>
+  <div id="description1">Training program for math competitions, organized by The Association of Mathematicians of Sarajevo Canton.</div>  
+  <div id="description2">MetaMath is a Croatian training program mostly focused at preparing students for math competitions. It is supported
+    by Croatian Mathematical Society.</div>
+  <div id="name1">The Association of Mathematicians of Sarajevo Canton</div>
+  <div id="name2">Croatian Mathematical Society</div>  
+  <div id="duration1">from 2022</div>
+  <div id="duration2">from 2022</div>
 </div>
-
-<div style="padding-left:16px">
-  <h3>Vertical Mobile Navbar</h3>
-  <p>This example demonstrates how a navigation menu on a mobile/smart phone could look like.</p>
-  <p>Click on the hamburger menu (three bars) in the top right corner, to toggle the menu.</p>
-</div>
-
-<!-- End smartphone / tablet look -->
-</div>
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-</script>
 
 </body>
 </html>
+
+
