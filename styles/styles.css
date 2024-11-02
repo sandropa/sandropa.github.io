@@ -12,6 +12,10 @@ body {
     margin: 0;
 }
 
+header {
+    z-index: 1000;
+}
+
 .content {
     padding: 20px;
 }
@@ -202,11 +206,13 @@ tr:nth-child(odd) {
 #description1 {
     grid-column: 2;
     grid-row: 2;
+    color: #343A40;
 }
   
 #description2 {
     grid-column: 2;
     grid-row: 5;
+    color: #343A40;
 }
   
 #duration1 {
@@ -282,16 +288,19 @@ fajlu, ali popravljat cu ovu strukturu kasnije */
 #ed_description1 {
     grid-column: 2;
     grid-row: 2;
+    color: #343A40;
 }
   
 #ed_description2 {
     grid-column: 2;
     grid-row: 5;
+    color: #343A40;
 }
 
 #ed_description3 {
     grid-column: 2;
     grid-row: 8;
+    color: #343A40;
 }
   
 #ed_duration1 {
@@ -310,4 +319,60 @@ fajlu, ali popravljat cu ovu strukturu kasnije */
     grid-column: 2;
     grid-row: 9;
     color: #6C757D;
+}
+
+
+
+/* Sada cu napraviti da ove dvije stvari u o meni dijelu
+budu flex sa wrapom */
+
+#ed_and_teaching {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#ed_and_teaching > * {
+    flex: 1 1 400px;
+}
+
+
+
+/* about me je nekad presirok */
+/* #about_me > p, h1 {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+} */
+
+main > * {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+footer {
+    background-color: #6C757D;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer h3 {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    color: white;
+}
+
+footer a {
+    margin: 10px 10px 10px 10px;
+    margin-top: 20px;
+    color: white;
+}
+
+#copyright {
+    margin: 20px 10px 10px 10px;
 }
