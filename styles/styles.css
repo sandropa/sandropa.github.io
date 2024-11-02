@@ -131,5 +131,5 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #profile_and_contact, #currently_thinking_about {
-    flex: 1 1 400px; /* Allows both sections to take equal space */
+    flex: 1 1 400px;
 }
