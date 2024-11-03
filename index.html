@@ -12,6 +12,7 @@
 <link rel="stylesheet" href="styles/styles.css">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -21,17 +22,17 @@
 <header class="sticky">
 <!-- https://www.w3schools.com/howto/howto_js_topnav.asp -->
     <!-- navbar -->
-    <div class="topnav">
-        <div id="name_nav">Sandro Paradžik</div>
-        <a href="#">Home</a>
-        <a href="#about_me">About me</a>
-        <a href="#news">News</a>
-        <a href="#blog">Blog</a>
+    <div class="topnav" id="myTopnav">
+        <a href="/index.html" id="name_nav">Sandro Paradžik</a> 
+        <a href="/index.html#">Home</a>
+        <a href="/index.html#about_me">About me</a>
+        <a href="/index.html#news">News</a>
+        <a href="/blog.html">Blog</a>
         <a href="projects">Projects</a>
         <a href="art">Art</a>
-        <!-- <a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
-        </a>  -->
+          </a>
     </div>
 </header>
 
@@ -211,11 +212,11 @@
 
 <footer>
     <h3>QUICK LINKS</h3>
-    <a href="#home">Home</a>
-    <a href="#about_me">About me</a>
-    <a href="#news">News</a>
-    <a href="blog">Blog</a>
-    <a href="#projects">Projects</a>
+    <a href="/index.html#">Home</a>
+    <a href="/index.html#about_me">About me</a>
+    <a href="index.html#news">News</a>
+    <a href="/blog.html">Blog</a>
+    <a href="projects">Projects</a>
     <a href="art">Art</a>
 
     <h3>CONTACT</h3>
@@ -227,6 +228,31 @@
         Copyright © 2024 Sandro Paradžik, All rights reserved.
     </div>
 </footer>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+
+    // CHATGPT GENERISAO FUNKCIJU ISPOD
+    // Automatically close the responsive menu when a link is clicked
+    document.addEventListener("DOMContentLoaded", function() {
+        var navLinks = document.querySelectorAll("#myTopnav a:not(.icon)");
+        navLinks.forEach(function(link) {
+        link.addEventListener("click", function() {
+            var x = document.getElementById("myTopnav");
+            if (x.className.includes("responsive")) {
+            x.className = "topnav"; // Remove "responsive" to close the menu
+            }
+        });
+        });
+    });
+</script>
 
 </body>
 </html>
