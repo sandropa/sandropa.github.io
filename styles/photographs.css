@@ -20,7 +20,7 @@ main::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('/images/1_tb_bw_rain.jpg'); /* Set your background image path */
+    background-image: url('/art/1_tb_bw_rain.jpg'); /* Set your background image path */
     background-size: cover; /* Cover the entire main area */
     background-position: center; /* Center the background image */
     opacity: 0.4; /* Set the opacity (0.0 to 1.0) */
@@ -37,8 +37,8 @@ main::before {
 }
 
 .photo {
-    flex: 1 1 400px; /* Allow items to grow, shrink, and set a base width */
-    max-width: 500px; /* Limit the maximum width of each image */
+    flex: 1 1 600px; /* Allow items to grow, shrink, and set a base width */
+    max-width: 600px; /* Limit the maximum width of each image */
     margin: 25px;
 }
 
