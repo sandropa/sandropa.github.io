@@ -1,0 +1,50 @@
+/* OVO JE CHATGPT TKD OVO JE SAMO PROBA ZA IZGLED */
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    position: relative; /* Allow positioning of the pseudo-element */
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    overflow: hidden; /* Prevent overflow if the image is larger than the container */
+}
+
+main::before {
+    content: '';
+    position: absolute; /* Position the overlay absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/1_tb_bw_rain.jpg'); /* Set your background image path */
+    background-size: cover; /* Cover the entire main area */
+    background-position: center; /* Center the background image */
+    opacity: 0.4; /* Set the opacity (0.0 to 1.0) */
+    z-index: 0; /* Place behind other content */
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to a new row */
+    justify-content: center; /* Center the items */
+    gap: 10px; /* Space between images */
+    position: relative; /* Create a new stacking context */
+    z-index: 1; /* Place above the background */
+}
+
+.photo {
+    flex: 1 1 400px; /* Allow items to grow, shrink, and set a base width */
+    max-width: 500px; /* Limit the maximum width of each image */
+    margin: 25px;
+}
+
+.photo img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    box-shadow: 0px 5px 10px #1f2123;
+}
