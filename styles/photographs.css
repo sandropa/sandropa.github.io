@@ -36,13 +36,13 @@ main::before {
     z-index: 1; /* Place above the background */
 }
 
-.photo {
+.photo, .video {
     flex: 1 1 600px; /* Allow items to grow, shrink, and set a base width */
     max-width: 600px; /* Limit the maximum width of each image */
     margin: 25px;
 }
 
-.photo img {
+.photo img, .video video {
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Optional: Add rounded corners */

@@ -415,3 +415,21 @@ footer a {
 #copyright {
     margin: 20px 10px 10px 10px;
 }
+
+
+/* news ------------------------------------------------ */
+
+
+#news li {
+    padding: 4px;
+}
+
+#news li::marker {
+    color: #3872b2;
+}
+
+#news li .date {
+    color: #3872b2;
+    margin-right: 5px;
+}
+
