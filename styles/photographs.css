@@ -42,6 +42,14 @@ main::before {
     margin: 25px;
 }
 
+.photo .photo_info {
+    color:black;
+    font-size: large;
+    padding: 10px;
+    text-align: center;
+    /* font-weight: bold; */
+}
+
 .photo img, .video video {
     width: 100%; /* Make images responsive */
     height: auto; /* Maintain aspect ratio */
