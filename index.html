@@ -1,247 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sandro Paradžik</title>
+    <title>Sandro Paradžik</title>
 
-<!-- https://www.w3schools.com/html/html_favicon.asp -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-<!-- https://www.w3schools.com/tags/att_link_rel.asp -->
-<link rel="stylesheet" href="styles/styles.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
 
-<!-- <div class="sticky">I will stick to the screen when you reach my scroll position</div> -->
-
 <header class="sticky">
-<!-- https://www.w3schools.com/howto/howto_js_topnav.asp -->
-    <!-- navbar -->
-    <div class="topnav" id="myTopnav">
-        <a href="/index.html" id="name_nav">Sandro Paradžik</a> 
-        <a href="/index.html#">Home</a>
-        <a href="/index.html#about_me">About me</a>
-        <a href="/index.html#news">News</a>
-        <a href="/blog.html">Blog</a>
-        <a href="projects">Projects</a>
-        <a href="/art.html">Art</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
-<main>
-    <div id="home">
-        <div id="profile_and_contact">
+<main class="container mt-4">
+    <div id="home" class="row">
+        <div id="profile_and_contact" class="col-md-4 text-center">
             <div id="profile_image">
-                <img src="images/profile3.JPG" alt="Profile image">
+                <img src="images/profile3.JPG" alt="Profile image" class="img-fluid rounded-circle">
             </div>
-            <div id="profile_info">
+            <div id="profile_info" class="mt-3">
                 Sandro Paradžik
             </div>
-            <div id="contact">
-                <a href="mailto:sandro.paradzik@gmail.com" title="Email">
+            <div id="contact" class="mt-3">
+                <a href="mailto:sandro.paradzik@gmail.com" title="Email" class="mr-2">
                     <i class="fas fa-envelope"></i>
                 </a>
-                <a href="https://github.com/sandropa" target="_blank" title="GitHub">
+                <a href="https://github.com/sandropa" target="_blank" title="GitHub" class="mr-2">
                     <i class="fab fa-github"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/sandropa" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i> 
+                <a href="https://www.linkedin.com/in/sandropa" target="_blank" title="LinkedIn" class="mr-2">
+                    <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="Sandro_CV.pdf".pdf" target="_blank" title="CV">
+                <a href="Sandro_CV.pdf" target="_blank" title="CV">
                     CV
-                    <!-- <i class="fas fa-file-pdf"></i> -->
                 </a>
             </div>
         </div>
 
-        <div id="currently_thinking_about">
-            <h2>Currently thinking about</h2>
+        <div id="currently_thinking_about" class="col-md-8">
+            <h2>Primary Interests</h2>
             <ul>
-                <li>Deep learning</li>
-                <li>Reinforcement learning</li>
-                <li>Program synthesis</li>
-                <li>Combinatorics (including graph theory, algorithms, and enumerative combinatorics)</li>
-                <li>Fine-tuning LLMs for mathematics education</li>
-                <li>AR/VR possibilities for art and mathematics</li>
-                <li>Intelligence measurements for AI</li>
-                <li>Collective intelligence</li> 
-                <li>Analogies and non-obvious isomorphisms</li>
-                <li>Genetic algorithms</li>
-                <li>Open-endedness in AI</li>
-                <li>Biological intelligence</li>
+                <li>AI research, with a particular focus on combining program synthesis and deep learning.</li>
+                <li>Preparing students for math competitions, with a special emphasis on combinatorics.</li>
+                <li>Understanding the nature of intelligence, encompassing AI, neuroscience, and cognitive science.</li>
             </ul>
-            
         </div>
     </div>
 
-    <div id="about_me">
-        <h1>About me</h1>
+    <div id="about_me" class="mt-4">
 
-        <p>
-            Hello! I'm Sandro, a Computer Science student completing my bachelor’s degree at the University of Sarajevo. 
-            My passion lies in advancing research in AI and machine learning. 
-            I believe that understanding intelligence is crucial not only for 
-            tackling complex challenges but also for deepening our insight into human cognition and, ultimately, humanity itself.
-        </p>
-
-        <p>
-            I am broadly interested in...
-        </p>
-
-        <div id="ed_and_teaching">
-            <div id="education_and_research">
+        <div id="ed_and_teaching" class="row">
+            <div id="education_and_research" class="col-md-6">
                 <h2>Education and research</h2>
                 <div class="education_and_research_grid">
-                    <img id="ed_logo1" src="/images/mpi_cyb_logo.jpg" alt="mpi_cyb">
-                    <img id="ed_logo2" src="/images/annt_logo.jpg" alt="annt">
-                    <img id="ed_logo3" src="/images/unsa_logo.svg" alt="unsa">
-                    <div id="ed_description1">Data-driven discovery of functional subnetworks in the brain of Zebrafish. This project is part of CaCTüS (Computation & Cognition Tübingen Summer Internship) programme.Data-driven discovery of functional subnetworks in the brain of Zebrafish. This project is part of CaCTüS (Computation & Cognition Tübingen Summer Internship) programme.</div>  
+                    <img id="ed_logo1" src="/images/mpi_cyb_logo.jpg" alt="mpi_cyb" class="img-fluid">
+                    <img id="ed_logo2" src="/images/annt_logo.jpg" alt="annt" class="img-fluid">
+                    <img id="ed_logo3" src="/images/unsa_logo.svg" alt="unsa" class="img-fluid">
+                    <div id="ed_description1">Data-driven discovery of functional subnetworks in the brain of Zebrafish. This project is part of CaCTüS (Computation & Cognition Tübingen Summer Internship) programme.</div>  
                     <div id="ed_description2">Unertainty quantification for agent based modeling.</div>
                     <div id="ed_description3">BSc in Computer Science</div>
                     <div id="ed_name1">Max Planck Institute for Biological Cybernetics</div>  
                     <div id="ed_name2">Association for the Advancement of Science and Technology in Bosnia and Herzegovina</div>  
                     <div id="ed_name3">University of Sarajevo</div>  
                     <div id="ed_duration1">Jul 2024 - Sep 2024</div>
-                    <div id="ed_duration2">Jel 2023 - Dec 2023</div>
+                    <div id="ed_duration2">Jul 2023 - Dec 2023</div>
                     <div id="ed_duration3">Oct 2021 - Jul 2025</div>
                 </div>
             </div>
-        
 
-            <div id="selected_teaching_and_mentoring">
-                <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_grid-template-columns1 -->
+            <div id="selected_teaching_and_mentoring" class="col-md-6">
                 <h2>Selected teaching and mentoring</h2>
                 <div class="teaching_grid">
-                    <img id="logo1" src="/images/umks_logo2.jpg" alt="umks">
-                    <img id="logo2" src="/images/hmd_logo.png" alt="hmd">
+                    <img id="logo1" src="/images/umks_logo2.jpg" alt="umks" class="img-fluid">
+                    <img id="logo2" src="/images/hmd_logo.png" alt="hmd" class="img-fluid">
                     <div id="description1">Training program for math competitions, organized by The Association of Mathematicians of Sarajevo Canton.</div>  
-                    <div id="description2">MetaMath is a Croatian training program mostly focused at preparing students for math competitions. It is supported
-                        by Croatian Mathematical Society.</div>
+                    <div id="description2">MetaMath is a Croatian training program mostly focused at preparing students for math competitions. It is supported by Croatian Mathematical Society.</div>
                     <div id="name1">The Association of Mathematicians of Sarajevo Canton</div>
                     <div id="name2">Croatian Mathematical Society</div>  
                     <div id="duration1">from 2022</div>
                     <div id="duration2">from 2022</div>
-                    </div>
+                </div>
             </div>
         </div>
 
-
-        <div id="selected_awards_from_math_comptetitions">
+        <div id="selected_awards_from_math_comptetitions" class="mt-4">
             <h2>Selected awards from math competitions</h2>
-            <p>
-                In high school, I actively competed in mathematics. 
-                While I was okay in algebra, geometry, and number theory, 
-                combinatorics was my strongest area and remains a subject I’m 
-                passionate about. I enjoy teaching and solving combinatorial 
-                problems, particularly in areas like graph theory, algorithms, 
-                and enumerative combinatorics. I find these interests 
-                closely linked to my current passions in AI and machine learning.
-            </p>
-            <!-- https://www.w3schools.com/html/tryit.asp?filename=tryhtml_table_intro -->
-            <table>
-                <tr>
-                  <th>Competition</th>
-                  <th>Award</th>
-                  <th>Year</th>
-                </tr>
-                <tr>
-                  <td>Mediterranean Mathematics Competition (also: <a href="https://en.wikipedia.org/wiki/Mediterranean_Mathematics_Competition" target="_blank">Peter O’Halloran Memorial</a>)</td>
-                  <td>Bronze medal</td>
-                  <td>2021</td>
-                </td>
-                </tr>
-                <tr>
-                  <td>Federation of Bosnia & Herzegovina</td>
-                  <td>rank 2nd</td>
-                  <td>2021</td>
-                </tr>
-                <tr>
-                  <td>Mediterranean Mathematics Competition</td>
-                  <td>Honorable Mention</td>
-                  <td>2019</td>
-                </tr>
-                <tr>
-                  <td>Federation of Bosnia & Herzegovina</td>
-                  <td>rank 1st</td>
-                  <td>2019</td>
-                </tr>
-                <tr>
-                  <td>Mediterranean Mathematics Competition</td>
-                  <td>Bronze medal</td>
-                  <td>2018</td>
-                </tr>
-                <tr>
-                  <td>Federation of Bosnia & Herzegovina</td>
-                  <td>rank 3rd</td>
-                  <td>2018</td>
-                </tr>
+            <p>In high school, I actively competed in mathematics. While I was okay in algebra, geometry, and number theory, combinatorics was my strongest area and remains a subject I’m passionate about. I enjoy teaching and solving combinatorial problems, particularly in areas like graph theory, algorithms, and enumerative combinatorics. I find these interests closely linked to my current passions in AI and machine learning.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Competition</th>
+                        <th>Award</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mediterranean Mathematics Competition (also: <a href="https://en.wikipedia.org/wiki/Mediterranean_Mathematics_Competition" target="_blank">Peter O’Halloran Memorial</a>)</td>
+                        <td>Bronze medal</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Federation of Bosnia & Herzegovina</td>
+                        <td>rank 2nd</td>
+                        <td>2021</td>
+                    </tr>
+                    <tr>
+                        <td>Mediterranean Mathematics Competition</td>
+                        <td>Honorable Mention</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>Federation of Bosnia & Herzegovina</td>
+                        <td>rank 1st</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>Mediterranean Mathematics Competition</td>
+                        <td>Bronze medal</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>Federation of Bosnia & Herzegovina</td>
+                        <td>rank 3rd</td>
+                        <td>2018</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
 
-    <div class="large_quote">
-        <blockquote>
-            “If you have a high sensitivity to analogies, you will extract powerful abstractions from little experience, and you will be able to use these abstractions to operate in a maximally large area of future experience space. You will be maximally efficient in converting past experience into the ability to handle future novelty.”
-        </blockquote>
-        <cite>— François Chollet</cite>
-    </div>
-
-    <div id="news">
+    <div id="news" class="mt-4">
         <h1>News</h1>
         <ul>
-            <li><span class="date">(Nov 2024)</span>A major update to my website.</li>
+            <li><span class="date">(Jan 2025)</span>A major update to my website.</li>
         </ul>
     </div>
 </main>
 
-<footer>
-    <h3>QUICK LINKS</h3>
-    <a href="/index.html#">Home</a>
-    <a href="/index.html#about_me">About me</a>
-    <a href="index.html#news">News</a>
-    <a href="/blog.html">Blog</a>
-    <a href="projects">Projects</a>
-    <a href="/art.html">Art</a>
-
+<footer class="bg-dark text-center py-4">
     <h3>CONTACT</h3>
-    <a href="mailto:sandro.paradzik@gmail.com" title="Email">sandro.paradzik@gmail.com</a>
-    <a href="https://www.linkedin.com/in/sandropa" target="_blank" title="LinkedIn">LinkedIn</a>
-
-
-    <div id="copyright">
+    <a href="mailto:sandro.paradzik@gmail.com" title="Email" class="d-block">sandro.paradzik@gmail.com</a>
+    <div id="copyright" class="mt-3">
         Copyright © 2024 Sandro Paradžik, All rights reserved.
     </div>
 </footer>
 
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-    // CHATGPT GENERISAO FUNKCIJU ISPOD
+<script>
     // Automatically close the responsive menu when a link is clicked
     document.addEventListener("DOMContentLoaded", function() {
-        var navLinks = document.querySelectorAll("#myTopnav a:not(.icon)");
+        var navLinks = document.querySelectorAll("#navbarNav a");
         navLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-            var x = document.getElementById("myTopnav");
-            if (x.className.includes("responsive")) {
-            x.className = "topnav"; // Remove "responsive" to close the menu
-            }
-        });
+            link.addEventListener("click", function() {
+                var navbarToggler = document.querySelector(".navbar-toggler");
+                if (navbarToggler.getAttribute("aria-expanded") === "true") {
+                    navbarToggler.click();
+                }
+            });
         });
     });
 </script>

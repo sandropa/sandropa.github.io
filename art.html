@@ -1,125 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sandro's photographs</title>
+    <title>Sandro Paradžik</title>
 
-<!-- https://www.w3schools.com/html/html_favicon.asp -->
-<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 
-<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 
-<!-- https://www.w3schools.com/tags/att_link_rel.asp -->
-<link rel="stylesheet" href="styles/styles.css">
-<link rel="stylesheet" href="styles/photographs.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .img-fluid {
+            max-height: 80vh;
+            width: auto;
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- <div class="sticky">I will stick to the screen when you reach my scroll position</div> -->
-
 <header class="sticky">
-<!-- https://www.w3schools.com/howto/howto_js_topnav.asp -->
-    <!-- navbar -->
-    <div class="topnav" id="myTopnav">
-        <a href="/index.html" id="name_nav">Sandro Paradžik</a> 
-        <a href="/index.html#">Home</a>
-        <a href="/index.html#about_me">About me</a>
-        <a href="/index.html#news">News</a>
-        <a href="/blog.html">Blog</a>
-        <a href="projects">Projects</a>
-        <a href="/art.html">Art</a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-          </a>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
+                <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
 
-<main>
-    <div class="gallery">
-        <div class="photo">
-            <img src="/art/1_tb_bw_rain_small.jpg">
-            <div class="photo_info">
-                Tübingen 2024
-            </div>
+<main class="container mt-4">
+    <div class="row">
+        <div class="col-12 mb-4 mx-auto">
+            <img class="img-fluid" src="/art/foggy_small.jpg" alt="Sarajevo 2025">
+            <p class="text-muted mt-2">Sarajevo 2025</p>
         </div>
-        <div class="photo">
-            <img src="/art/2021_0505_photo2_small.jpeg">
-            <div class="photo_info">
-                Sarajevo 2021
-            </div>
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/1_tb_bw_rain_small.jpg" alt="Tübingen 2024">
+            <p class="text-muted mt-2">Tübingen 2024</p>
         </div>
-        <div class="photo">
-            <img src="/art/mostar1_small.jpg">
-            <div class="photo_info">
-                Mostar 2021
-            </div>
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/2021_0505_photo2_small.jpeg" alt="Sarajevo 2021">
+            <p class="text-muted mt-2">Sarajevo 2021</p>
         </div>
-        <div class="photo">
-            <img src="/art/sarajevo_cat_1_small.jpg">
-            <div class="photo_info">
-                Sarajevo 2021
-            </div>
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/sarajevo_cat_1_small.jpg" alt="Sarajevo 2021">
+            <p class="text-muted mt-2">Sarajevo 2021</p>
         </div>
-        <div class="photo">
-            <img src="/art/2021_0505_photo1_small.jpeg">
-            <div class="photo_info">
-                Sarajevo 2021
-            </div>
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/mostar1_small.jpg" alt="Mostar 2021">
+            <p class="text-muted mt-2">Mostar 2021</p>
         </div>
-        <div class="photo">
-            <img src="/art/skate1_small.jpg">
-            <div class="photo_info">
-                Sarajevo 2021
-            </div>
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/2021_0505_photo1_small.jpeg" alt="Sarajevo 2021">
+            <p class="text-muted mt-2">Sarajevo 2021</p>
         </div>
-        <!-- <div class="video">
-            <video src="/art/video1.mp4" controls muted></video>
-        </div> -->
-        <!-- Za projekat cu dodati ovaj video. Za GitHub pages ne znam bas -->
+        <div class="col-12 mb-4">
+            <img class="img-fluid" src="/art/skate1_small.jpg" alt="Sarajevo 2021">
+            <p class="text-muted mt-2">Sarajevo 2021</p>
+        </div>
     </div>
 </main>
 
-<footer>
-    <h3>QUICK LINKS</h3>
-    <a href="/index.html#home">Home</a>
-    <a href="/index.html#about_me">About me</a>
-    <a href="/index.html#news">News</a>
-    <a href="/blog.html">Blog</a>
-    <a href="projects">Projects</a>
-    <a href="/art.html">Art</a>
-
+<footer class="bg-dark text-center py-4">
     <h3>CONTACT</h3>
-    <a href="mailto:sandro.paradzik@gmail.com" title="Email">sandro.paradzik@gmail.com</a>
-    <a href="https://www.linkedin.com/in/sandropa" target="_blank" title="LinkedIn">LinkedIn</a>
-
-
-    <div id="copyright">
+    <a href="mailto:sandro.paradzik@gmail.com" title="Email" class="d-block">sandro.paradzik@gmail.com</a>
+    <div id="copyright" class="mt-3">
         Copyright © 2024 Sandro Paradžik, All rights reserved.
     </div>
 </footer>
 
-<script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
-      }
-    }
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+<script>
     // Automatically close the responsive menu when a link is clicked
     document.addEventListener("DOMContentLoaded", function() {
-        var navLinks = document.querySelectorAll("#myTopnav a:not(.icon)");
+        var navLinks = document.querySelectorAll("#navbarNav a");
         navLinks.forEach(function(link) {
-        link.addEventListener("click", function() {
-            var x = document.getElementById("myTopnav");
-            if (x.className.includes("responsive")) {
-            x.className = "topnav"; // Remove "responsive" to close the menu
-            }
-        });
+            link.addEventListener("click", function() {
+                var navbarToggler = document.querySelector(".navbar-toggler");
+                if (navbarToggler.getAttribute("aria-expanded") === "true") {
+                    navbarToggler.click();
+                }
+            });
         });
     });
 </script>
