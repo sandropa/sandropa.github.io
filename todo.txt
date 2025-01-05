@@ -1,1 +1,3 @@
 Ne izgleda okej kada na okrenutom mobitelu (index), slika postane ovalna, tekstovi ispod zavrse na pola ekrana umjesto od pola ekrana umjeto preko citavog.
+
+Na laptopu, moja slika je previse lijevo
