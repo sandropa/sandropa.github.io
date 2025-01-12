@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Math Blog Post</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/../images/favicon.ico">
+
     <!-- Bootstrap 4 CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts - Droid Serif -->
@@ -13,6 +16,8 @@
     <link rel="stylesheet" href="../styles/styles.css">
     <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
     <style>
         @media (max-width: 576px) {
             .navbar-nav {
@@ -32,6 +37,16 @@
             .container {
                 max-width: 900px; /* Set a max width for large screens */
             }
+        }
+
+        /* Make all headers black */
+        h1, h2, h3, h4, h5, h6 {
+            color: black;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            text-align: justify;
         }
     </style>
 </head>
@@ -53,33 +68,51 @@
         </nav>
     </header>
 
-    <div class="container mt-5 blog-post">
+    <div class="container py-5 blog-post">
         <!-- Blog Title -->
-        <div class="row">
+        <div class="row mt-5">
             <div class="col">
-                <h1 class="text-center">[Blog Post Title]</h1>
-                <p class="text-center text-muted">Posted on: [Date]</p>
+                <h1 class="text-center">Solving Markov Decision Processes Using Linear Programming</h1>
+                <p class="text-center text-muted">Posted on: January 12th, 2025</p>
             </div>
         </div>
 
         <!-- Blog Content -->
         <div class="row">
             <div class="col">
+                <p class="my-5"><em>
+                    In this blog post, we will explore how to solve Markov Decision Processes (MDPs) using linear programming techniques. MDPs are mathematical models used for decision-making in situations where outcomes are partly random and partly under the control of a decision maker. By leveraging linear programming, we can find optimal policies that maximize the expected reward over time.
+                </em></p>
+
+                <h2>Linear Programming Primer</h2>
                 <p>
-                    Welcome to this exciting blog post about [math topic]! Here, we will explore some fascinating concepts and delve deep into the world of mathematics.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi quidem cupiditate atque quas fugiat, neque voluptatibus aut aliquam reiciendis consectetur expedita sapiente laudantium. Deleniti vel architecto ducimus facilis voluptatem, veritatis rerum corporis ipsum rem fuga error explicabo iusto, ad, optio aperiam? Quasi, nulla at, impedit sint illo consequuntur consectetur distinctio cum aliquid illum debitis veniam provident aliquam. Neque quidem nobis iure odio dolorum, aliquid alias? Nesciunt beatae eveniet pariatur aut amet sed harum molestiae! Nostrum, laborum, consequuntur ut sapiente architecto nobis deserunt blanditiis assumenda, odio incidunt aliquid eveniet fuga culpa. Illum quia illo doloremque culpa eum aspernatur voluptas explicabo.
                 </p>
                 <p>
-                    Below is a visualization illustrating some of the key ideas discussed:
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deleniti quisquam, consequuntur earum nihil, quaerat nesciunt sapiente minus eveniet vel provident nostrum doloremque quasi, pariatur voluptatibus autem tempore. Numquam harum necessitatibus quasi non maiores totam assumenda, quos cum explicabo ea sapiente quae veniam debitis deleniti, tempore nisi? Fugiat placeat, possimus ab eligendi quaerat commodi, eveniet dicta assumenda officia eos illo dolorum ut earum corporis cupiditate est sequi. Possimus, facilis est nam sed temporibus at, cumque ab incidunt, magni aliquam velit!
                 </p>
+
             </div>
         </div>
 
         <!-- Visualization Section -->
         <div class="row">
             <div class="col text-center">
-                <canvas id="mathVisualization" width="400" height="400"></canvas>
+            <canvas id="mathVisualization" style="width: 50; height: 50;"></canvas>
             </div>
         </div>
+
+        <!-- Additional Content -->
+        <div class="row mt-4">
+            <div class="col">
+                <p>
+                    We hope this visualization helps you understand the topic better. Mathematics is a universal language, and visual tools often make it easier to grasp complex ideas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Additional  -->
+        <div id="plot" class="border border-dark" style="max-width: 100%; height: 80vh; overflow: hidden;"></div>
 
         <!-- Additional Content -->
         <div class="row mt-4">
@@ -117,35 +150,81 @@
         var chart = new Chart(ctx, {
             type: 'line', // You can change this to 'bar', 'radar', etc.
             data: {
-                labels: ['x1', 'x2', 'x3', 'x4', 'x5'],
-                datasets: [{
-                    label: 'Sample Data',
-                    data: [2, 4, 6, 8, 10],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    borderWidth: 2,
-                    fill: false
-                }]
+            labels: ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7'],
+            datasets: [{
+            label: 'Sample Data',
+            data: [2, 4, 6, 8, 10, 22, 30],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderWidth: 2,
+            fill: true
+            },
+            {
+            label: 'Additional Data',
+            data: [1, 32, 17, 19, 15, 29, 28],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderWidth: 2,
+            fill: true
+            }]
             },
             options: {
-                responsive: true,
-                scales: {
-                    xAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'X-Axis'
-                        }
-                    }],
-                    yAxes: [{
-                        display: true,
-                        scaleLabel: {
-                            display: true,
-                            labelString: 'Y-Axis'
-                        }
-                    }]
-                }
+            responsive: true,
+            scales: {
+            x: {
+            display: true,
+            title: {
+                display: true,
+                text: 'X-Axis'
+            }
+            },
+            y: {
+            display: true,
+            title: {
+                display: true,
+                text: 'Y-Axis'
+            }
+            }
+            }
             }
         });
-    </script>
+   
+        // SECOND VISUALIZATION
+            // Generate 3D line data
+        const x = [];
+        const y = [];
+        const z = [];
+        for (let i = 0; i < 100; i++) {
+            x.push(i * 0.1);            // X increases linearly
+            y.push(Math.sin(i * 0.1)); // Y follows a sine wave
+            z.push(Math.cos(i * 0.1)); // Z follows a cosine wave
+        }
+
+        // Define the line trace
+        const trace = {
+            x: x,
+            y: y,
+            z: z,
+            type: 'scatter3d',
+            mode: 'lines',
+            line: {
+                color: 'blue',
+                width: 4
+            }
+        };
+
+        // Define the layout
+        const layout = {
+            title: '3D Line Plot',
+            scene: {
+                xaxis: { title: 'X-axis' },
+                yaxis: { title: 'Y-axis' },
+                zaxis: { title: 'Z-axis' }
+            }
+        };
+
+        // Render the plot
+        Plotly.newPlot('plot', [trace], layout);
+   </script>
 </body>
 </html>

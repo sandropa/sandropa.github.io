@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive 3D Plot</title>
+    <script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
+</head>
+<body>
+    <h1>Interactive 3D Line Plot</h1>
+    <div id="plot" style="width: 100%; height: 600px;"></div>
+
+    <script>
+        // Generate 3D line data
+        const x = [];
+        const y = [];
+        const z = [];
+        for (let i = 0; i < 100; i++) {
+            x.push(i * 0.1);            // X increases linearly
+            y.push(Math.sin(i * 0.1)); // Y follows a sine wave
+            z.push(Math.cos(i * 0.1)); // Z follows a cosine wave
+        }
+
+        // Define the line trace
+        const trace = {
+            x: x,
+            y: y,
+            z: z,
+            type: 'scatter3d',
+            mode: 'lines',
+            line: {
+                color: 'blue',
+                width: 4
+            }
+        };
+
+        // Define the layout
+        const layout = {
+            title: '3D Line Plot',
+            scene: {
+                xaxis: { title: 'X-axis' },
+                yaxis: { title: 'Y-axis' },
+                zaxis: { title: 'Z-axis' }
+            }
+        };
+
+        // Render the plot
+        Plotly.newPlot('plot', [trace], layout);
+    </script>
+</body>
+</html>
