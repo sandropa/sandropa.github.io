@@ -8,10 +8,18 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Google Fonts - Droid Serif -->
     <link href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap" rel="stylesheet">
+    
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="../styles/styles.css">
     <!-- Chart.js Library -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
-        body {
+        @media (max-width: 576px) {
+            .navbar-nav {
+                text-align: center;
+            }
+        }
+        .blog-post {
             font-family: 'Droid Serif', serif;
         }
         /* Default container width */
@@ -45,7 +53,7 @@
         </nav>
     </header>
 
-    <div class="container mt-5">
+    <div class="container mt-5 blog-post">
         <!-- Blog Title -->
         <div class="row">
             <div class="col">
