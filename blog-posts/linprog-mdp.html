@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math Blog Post</title>
+    <!-- Bootstrap 4 CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts - Droid Serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap" rel="stylesheet">
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: 'Droid Serif', serif;
+        }
+        /* Default container width */
+        .container {
+            width: 100%;
+        }
+
+        /* Reduce width on large screens */
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 900px; /* Set a max width for large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container mt-5">
+        <!-- Blog Title -->
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center">[Blog Post Title]</h1>
+                <p class="text-center text-muted">Posted on: [Date]</p>
+            </div>
+        </div>
+
+        <!-- Blog Content -->
+        <div class="row">
+            <div class="col">
+                <p>
+                    Welcome to this exciting blog post about [math topic]! Here, we will explore some fascinating concepts and delve deep into the world of mathematics.
+                </p>
+                <p>
+                    Below is a visualization illustrating some of the key ideas discussed:
+                </p>
+            </div>
+        </div>
+
+        <!-- Visualization Section -->
+        <div class="row">
+            <div class="col text-center">
+                <canvas id="mathVisualization" width="400" height="400"></canvas>
+            </div>
+        </div>
+
+        <!-- Additional Content -->
+        <div class="row mt-4">
+            <div class="col">
+                <p>
+                    We hope this visualization helps you understand the topic better. Mathematics is a universal language, and visual tools often make it easier to grasp complex ideas.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Automatically close the responsive menu when a link is clicked
+        document.addEventListener("DOMContentLoaded", function() {
+            var navLinks = document.querySelectorAll("#navbarNav a");
+            navLinks.forEach(function(link) {
+                link.addEventListener("click", function() {
+                    var navbarToggler = document.querySelector(".navbar-toggler");
+                    if (navbarToggler.getAttribute("aria-expanded") === "true") {
+                        navbarToggler.click();
+                    }
+                });
+            });
+        });
+    </script>
+
+    <!-- JavaScript for Visualization -->
+    <script>
+        var ctx = document.getElementById('mathVisualization').getContext('2d');
+        var chart = new Chart(ctx, {
+            type: 'line', // You can change this to 'bar', 'radar', etc.
+            data: {
+                labels: ['x1', 'x2', 'x3', 'x4', 'x5'],
+                datasets: [{
+                    label: 'Sample Data',
+                    data: [2, 4, 6, 8, 10],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    borderWidth: 2,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    xAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'X-Axis'
+                        }
+                    }],
+                    yAxes: [{
+                        display: true,
+                        scaleLabel: {
+                            display: true,
+                            labelString: 'Y-Axis'
+                        }
+                    }]
+                }
+            }
+        });
+    </script>
+</body>
+</html>
