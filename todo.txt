@@ -2,4 +2,17 @@ Ne izgleda okej kada na okrenutom mobitelu (index), slika postane ovalna, teksto
 
 Na laptopu, moja slika je previse lijevo
 
-Koristiti mathbox za ova matematiku u blogu
+Dodati mozda rjesavanje lpa u JS, tako da 
+mogu animirati kako se mijenja kroz vrijeme
+policy.
+
+Ne zapocinjati sa linearnim programiranje
+vec sa problemom. sjetiti se onog sa
+smoking gun sto je spominjao grant
+sanderson
+fino napisati ovo
+
+dodati svoje crteze
+i ai animacije i sl 
+
+mozda croppati ovog malog robota i koristiti ga za animacije
