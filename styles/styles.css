@@ -433,3 +433,7 @@ footer a {
     margin-right: 5px;
 }
 
+.blog-post a:hover {
+    opacity: 0.8;
+}
+
