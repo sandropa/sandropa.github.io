@@ -1,219 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solving Markov Decision Processes Using Linear Programming</title>
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/../images/robot-mdp.webp">
-
-    <!-- Bootstrap 4 CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts - Droid Serif -->
-    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap" rel="stylesheet">
-    
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-    <link rel="stylesheet" href="../styles/styles.css">
-    <!-- Chart.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-    <script src="https://cdn.plot.ly/plotly-2.25.2.min.js"></script>
-    <style>
-        @media (max-width: 576px) {
-            .navbar-nav {
-                text-align: center;
-            }
-        }
-        .blog-post {
-            font-family: 'Droid Serif', serif;
-        }
-        /* Default container width */
-        .container {
-            width: 100%;
-        }
-
-        /* Reduce width on large screens */
-        @media (min-width: 1200px) {
-            .container {
-                max-width: 900px; /* Set a max width for large screens */
-            }
-        }
-
-        /* Make all headers black */
-        h1, h2, h3, h4, h5, h6 {
-            color: black;
-            margin-bottom: 1rem;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        .range-container {
-            text-align: center;
-            margin-top: 20px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solving Markov Decision Processes Using Linear Programming</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/../images/robot-mdp.webp">
+  
+  <!-- Bootstrap 4 CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Droid Serif -->
+  <link href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <style>
+    @media (max-width: 576px) {
+      .navbar-nav {
+        text-align: center;
+      }
+    }
+    .blog-post {
+      font-family: 'Droid Serif', serif;
+    }
+    /* Default container width */
+    .container {
+      width: 100%;
+    }
+    /* Reduce width on large screens */
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 900px; /* Set a max width for large screens */
+      }
+    }
+    /* Make all headers black */
+    h1, h2, h3, h4, h5, h6 {
+      color: black;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+    }
+    /* Updated styling for code blocks */
+    pre {
+      background: #f8f9fa;
+      padding: 1rem;
+      overflow-x: auto;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      color: #3872b2;  /* Changed to blue color */
+    }
+    /* Inline code styling */
+    p code, li code {
+      background-color: #f8f9fa;
+      padding: 2px 4px;
+      border-radius: 3px;
+      color: #3872b2;  /* Changed to blue color */
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-    <div class="container py-5 blog-post">
-        <!-- Blog Title -->
-        <div class="row mt-5">
-            <div class="col">
-                <h1 class="text-center">Solving Markov Decision Processes Using Linear Programming</h1>
-                <p class="text-center text-muted">Posted on: January 12th, 2025</p>
-            </div>
-        </div>
-
-        <!-- Blog Content -->
-        <div class="row">
-            <div class="col">
-                <p class="my-5"><em>
-                    In this blog post, we will explore how to solve Markov Decision Processes (MDPs) using linear programming techniques. MDPs are mathematical models used for decision-making in situations where outcomes are partly random and partly under the control of a decision maker. By leveraging linear programming, we can find optimal policies that maximize the expected reward over time.
-                </em></p>
-
-                <h2>Linear Programming Primer</h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi quidem cupiditate atque quas fugiat, neque voluptatibus aut aliquam reiciendis consectetur expedita sapiente laudantium. Deleniti vel architecto ducimus facilis voluptatem, veritatis rerum corporis ipsum rem fuga error explicabo iusto, ad, optio aperiam? Quasi, nulla at, impedit sint illo consequuntur consectetur distinctio cum aliquid illum debitis veniam provident aliquam. Neque quidem nobis iure odio dolorum, aliquid alias? Nesciunt beatae eveniet pariatur aut amet sed harum molestiae! Nostrum, laborum, consequuntur ut sapiente architecto nobis deserunt blanditiis assumenda, odio incidunt aliquid eveniet fuga culpa. Illum quia illo doloremque culpa eum aspernatur voluptas explicabo.
-                </p>
-            </div>
-        </div>
-
-        <!-- Visualization Section -->
-        <div class="row">
-            <div class="col text-center">
-                <canvas id="mathVisualization" style="width: 50; height: 50;"></canvas>
-            </div>
-        </div>
-
-        <!-- Range Slider to Change Chart -->
-        <div class="range-container mb-4">
-            <label for="valueInput">Adjust Chart Values:</label>
-            <input type="range" id="valueInput" min="0" max="100" value="50" class="form-control-range">
-        </div>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi quidem cupiditate atque quas fugiat, neque voluptatibus aut aliquam reiciendis consectetur expedita sapiente laudantium. Deleniti vel architecto ducimus facilis voluptatem, veritatis rerum corporis ipsum rem fuga error explicabo iusto, ad, optio aperiam? Quasi, nulla at, impedit sint illo consequuntur consectetur distinctio cum aliquid illum debitis veniam provident aliquam. Neque quidem nobis iure odio dolorum, aliquid alias? Nesciunt beatae eveniet pariatur aut amet sed harum molestiae! Nostrum, laborum, consequuntur ut sapiente architecto nobis deserunt blanditiis assumenda, odio incidunt aliquid eveniet fuga culpa. Illum quia illo doloremque culpa eum aspernatur voluptas explicabo.
-        </p>
-
-        <!-- Plotly Chart -->
-        <div id="plot" class="border border-dark mb-4" style="max-width: 100%; height: 80vh; overflow: hidden;"></div>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quasi quidem cupiditate atque quas fugiat, neque voluptatibus aut aliquam reiciendis consectetur expedita sapiente laudantium. Deleniti vel architecto ducimus facilis voluptatem, veritatis rerum corporis ipsum rem fuga error explicabo iusto, ad, optio aperiam? Quasi, nulla at, impedit sint illo consequuntur consectetur distinctio cum aliquid illum debitis veniam provident aliquam. Neque quidem nobis iure odio dolorum, aliquid alias? Nesciunt beatae eveniet pariatur aut amet sed harum molestiae! Nostrum, laborum, consequuntur ut sapiente architecto nobis deserunt blanditiis assumenda, odio incidunt aliquid eveniet fuga culpa. Illum quia illo doloremque culpa eum aspernatur voluptas explicabo.
-        </p>
+  <div class="container py-5 blog-post">
+    <!-- Blog Title -->
+    <div class="row mt-5">
+      <div class="col">
+        <h1 class="text-center">Solving Markov Decision Processes Using Linear Programming</h1>
+        <p class="text-center text-muted">Posted on: February 9th, 2025</p>
+      </div>
     </div>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    
-    <script>
-        // Automatically close the responsive menu when a link is clicked
-        document.addEventListener("DOMContentLoaded", function() {
-            var navLinks = document.querySelectorAll("#navbarNav a");
-            navLinks.forEach(function(link) {
-                link.addEventListener("click", function() {
-                    var navbarToggler = document.querySelector(".navbar-toggler");
-                    if (navbarToggler.getAttribute("aria-expanded") === "true") {
-                        navbarToggler.click();
-                    }
-                });
-            });
-        });
+    <!-- Blog Content -->
+    <div class="row">
+      <div class="col">
+        <p class="my-5"><em>
+          This post presents a solution to a Markov Decision Process (MDP) problem using linear programming (LP). We explore a recycling robot problem that optimizes actions to collect soda cans while managing battery levels. The approach is based on Bellman optimality equations and implemented in Python using the <code>cvxpy</code> library.
+        </em></p>
 
-        // Initialize the chart
-        var ctx = document.getElementById('mathVisualization').getContext('2d');
-        var chart = new Chart(ctx, {
-            type: 'line', // You can change this to 'bar', 'radar', etc.
-            data: {
-                labels: ['x1', 'x2', 'x3', 'x4', 'x5', 'x6', 'x7'],
-                datasets: [{
-                    label: 'Sample Data',
-                    data: [2, 4, 6, 8, 10, 22, 30],
-                    borderColor: 'rgba(75, 192, 192, 1)',
-                    backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                    borderWidth: 2,
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                scales: {
-                    x: {
-                        display: true,
-                        title: {
-                            display: true,
-                            text: 'X-Axis'
-                        }
-                    },
-                    y: {
-                        display: true,
-                        title: {
-                            display: true,
-                            text: 'Y-Axis'
-                        }
-                    }
-                }
-            }
-        });
+        <h2>Introduction</h2>
+        <p>
+          This document presents a solution to a Markov Decision Process (MDP) problem using linear programming (LP). The problem, as proposed by Sutton and Barto, involves optimizing the actions of a robot that collects soda cans while managing its battery levels efficiently.
+        </p>
 
-        // Update chart data dynamically with range input
-        document.getElementById('valueInput').addEventListener('input', function(event) {
-            var newValue = event.target.value;
-            chart.data.datasets[0].data = [newValue, newValue + 2, newValue + 4, newValue + 6, newValue + 8, newValue + 10, newValue + 12];
-            chart.update();
-        });
+        <h2>Problem Statement</h2>
+        <p>
+          The robot operates in two battery states: <strong>high</strong> and <strong>low</strong>. Depending on the state, the robot can choose among several actions:
+        </p>
+        <ul>
+          <li><strong>Search for cans:</strong> Yields an expected reward of <code>2</code>, but in the high state, it risks transitioning to the low state with probability <code>1 - α</code>. In the low state, searching risks running out of battery, penalized by <code>-3</code> (after which the battery is set to high state).</li>
+          <li><strong>Wait for cans:</strong> Provides an expected reward of <code>1</code> and keeps the battery state unchanged.</li>
+          <li><strong>Charge the battery:</strong> Available only in the low state, it transitions to the high state without a direct reward.</li>
+        </ul>
+        <p>
+          The objective is to maximize the cumulative discounted reward with a discount factor <code>γ = 0.9</code>.
+        </p>
 
-        // Generate 3D line data and plot
-        const x = [];
-        const y = [];
-        const z = [];
-        for (let i = 0; i < 100; i++) {
-            x.push(i * 0.1);            // X increases linearly
-            y.push(Math.sin(i * 0.1)); // Y follows a sine wave
-            z.push(Math.cos(i * 0.1)); // Z follows a cosine wave
-        }
+        <h2>Mathematical Formulation</h2>
+        <p>
+          Using the Bellman optimality equations, the problem is formulated as an LP. Let <em>v(h)</em> and <em>v(l)</em> represent the value functions for the high and low battery states, respectively. The rewards are defined as <code>r<sub>search</sub> = 2</code> and <code>r<sub>wait</sub> = 1</code>. The constraints are derived as follows:
+        </p>
+        <pre>
+High state (h):
+   v(h) ≥ r₍wait₎ + γ · v(h)
+   v(h) ≥ r₍search₎ + γ · (α · v(h) + (1 - α) · v(l))
 
-        const trace = {
-            x: x,
-            y: y,
-            z: z,
-            type: 'scatter3d',
-            mode: 'lines',
-            line: {
-                width: 4
-            }
-        };
+Low state (l):
+   v(l) ≥ r₍wait₎ + γ · v(l)
+   v(l) ≥ γ · v(h)
+   v(l) ≥ β · r₍search₎ - 3 · (1 - β) + γ · ((1 - β) · v(h) + β · v(l))
+        </pre>
+        <p>
+          The LP formulation is:
+        </p>
+        <pre>
+Minimize: v(h)
+Subject to: the above constraints.
+        </pre>
 
-        const layout = {
-            title: '3D Line Plot',
-            scene: {
-                xaxis: { title: 'X-axis' },
-                yaxis: { title: 'Y-axis' },
-                zaxis: { title: 'Z-axis' }
-            }
-        };
+        <h2>Python Implementation</h2>
+        <p>
+          The following Python code uses the <code>cvxpy</code> library to solve the linear programming formulation of the recycling robot problem:
+        </p>
+        <pre><code class="python">
+def recycling_robot(alpha, beta, r_s=2, r_w=1, gamma=0.9):
+    # Decision variables
+    v_h = cp.Variable(name="v_h")  # Value for high state
+    v_l = cp.Variable(name="v_l")  # Value for low state
 
-        Plotly.newPlot('plot', [trace], layout);
-    </script>
+    # Objective
+    objective = cp.Minimize(v_h)  # we can also use v_h + v_l
+
+    # Constraints (Bellman)
+    constraints = [
+        # high -> wait
+        v_h >= r_w + gamma * v_h,
+
+        # high -> search
+        v_h >= r_s + gamma * (alpha * v_h + (1 - alpha) * v_l),
+
+        # low -> wait
+        v_l >= r_w + gamma * v_l,
+
+        # low -> recharge
+        v_l >= gamma * v_h,
+
+        # low -> search
+        v_l >= beta * r_s - 3 * (1 - beta) + gamma * ((1 - beta) * v_h + beta * v_l)
+    ]
+
+    # Solve the problem using a linear programming solver
+    prob = cp.Problem(objective, constraints)
+    prob.solve(solver=cp.GLPK)  # Use GLPK, an LP solver
+
+    # Convert v_h and v_l to float
+    v_h = float(v_h.value)
+    v_l = float(v_l.value)
+
+    # Calculate optimal policies
+    pi_h = -1
+    pi_l = -1
+
+    eps = 0.001
+
+    if abs(v_h - (r_w + gamma * v_h)) < eps:
+        pi_h = 1  # wait
+    elif abs(v_h - (r_s + gamma * (alpha * v_h + (1 - alpha) * v_l))) < eps:
+        pi_h = 2  # search
+
+    if abs(v_l - (r_w + gamma * v_l)) < eps:
+        pi_l = 1  # wait
+    elif abs(v_l - (gamma * v_h)) < eps:
+        pi_l = 0  # recharge
+    elif abs(v_l - (beta * r_s - 3 * (1 - beta) + gamma * ((1 - beta) * v_h + beta * v_l))) < eps:
+        pi_l = 2  # search
+
+    return {
+        "v_h": v_h,
+        "v_l": v_l,
+        "pi_h": pi_h,
+        "pi_l": pi_l
+    }
+        </code></pre>
+
+        <h2>Results and Discussion</h2>
+        <p>
+          The approach presented successfully solves the recycling robot problem using Python. The results illustrate the optimal value functions and policies for <code>α ∈ (0,1)</code> and <code>β ∈ (0,1)</code>, demonstrating how MDPs can be effectively solved using LP.
+        </p>
+        <div class="text-center">
+          <img src="images/results-mdp-1.png" alt="Results of the linear programming solution" class="img-fluid" style="max-width:100%;">
+          <p class="text-muted">Figure 1: Results of the linear programming solution.</p>
+        </div>
+
+        <h2>References</h2>
+        <ul>
+          <li>
+            Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement learning: An introduction</em> (2nd ed.). MIT Press.
+          </li>
+          <li>
+            Helmert, M., &amp; Röger, G. (2021). <em>Planning and Optimization: F2. Bellman Equation &amp; Linear Programming</em>. Retrieved from 
+            <a href="https://ai.dmi.unibas.ch/_files/teaching/hs21/po/slides/po-f02.pdf" target="_blank">https://ai.dmi.unibas.ch/_files/teaching/hs21/po/slides/po-f02.pdf</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
