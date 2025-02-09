@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solving the Cutting Stock Problem: Integer Programming and Column Generation</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="/../images/paper-icon.webp">
+  
+  <!-- Bootstrap 4 CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts - Droid Serif & Roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Droid+Serif&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+  
+  <style>
+    @media (max-width: 576px) {
+      .navbar-nav {
+        text-align: center;
+      }
+    }
+    .blog-post {
+      font-family: 'Droid Serif', serif;
+    }
+    /* Default container width */
+    .container {
+      width: 100%;
+    }
+    /* Reduce width on large screens */
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 900px; /* Set a max width for large screens */
+      }
+    }
+    /* Make all headers black */
+    h1, h2, h3, h4, h5, h6 {
+      color: black;
+      margin-bottom: 1rem;
+    }
+    p {
+      text-align: justify;
+    }
+    /* Styling for code blocks */
+    pre {
+      background: #f8f9fa;
+      padding: 1rem;
+      overflow-x: auto;
+      border: 1px solid #dee2e6;
+      border-radius: 4px;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+      color: #3872b2;
+    }
+    /* Inline code styling */
+    p code, li code {
+      background-color: #f8f9fa;
+      padding: 2px 4px;
+      border-radius: 3px;
+      color: #3872b2;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html#">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
+          <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container py-5 blog-post">
+    <!-- Blog Title -->
+    <div class="row mt-5">
+      <div class="col">
+        <h1 class="text-center">Solving the Cutting Stock Problem: Integer Programming and Column Generation</h1>
+        <p class="text-center text-muted">Posted on: March 15th, 2025</p>
+      </div>
+    </div>
+
+    <!-- Blog Content -->
+    <div class="row">
+      <div class="col">
+        <p>
+          Many optimization problems can be reduced to integer programming (IP) or mixed-integer programming (MIP) problems.
+          One such problem is the <strong>Cutting Stock Problem (CSP)</strong>, and in this post we focus on its 1D variant.
+          These problems are often NP-hard (for example, the CSP is NP-hard as noted in [Wolsey, 2020]).
+          We will compare the performance of different algorithms for solving the CSP, paying special attention to the column generation approach.
+        </p>
+        <p class="text-center mb-5">
+          <a href="https://github.com/sandropa/Cutting-stock-problem" target="_blank" 
+             style="color: #F13C20; 
+                    text-decoration: none; 
+                    border: 1px solid #F13C20; 
+                    padding: 8px 16px; 
+                    border-radius: 4px;
+                    transition: opacity 0.2s ease;">
+            View Project on GitHub
+          </a>
+        </p>
+        
+        <h2>Problem Description</h2>
+        <p>
+          Imagine a paper factory that receives large sheets of paper with dimensions <code>1 × L</code> (where <code>L</code> is a positive real number). These large sheets can only be cut along their width (each resulting piece retaining a width of 1). Therefore, for a paper piece of dimensions <code>1 × a</code>, the parameter <code>a</code> represents its length. Assume that there is demand for paper pieces of various lengths <code>a<sub>i</sub></code> (for <code>i = 1, …, n</code>) with corresponding demand quantities <code>d<sub>i</sub></code>. The objective is to minimize the number of large sheets of size <code>L</code> required to meet this demand.
+        </p>
+        
+        <h2>IP Formulation</h2>
+        <p>
+          A straightforward formulation of the CSP as an integer programming problem is:
+        </p>
+        <pre>
+Minimize:    z = ∑ₖ₌₁ᴷ yₖ
+
+Subject to:
+  ∑ₖ₌₁ᴷ xᵢₖ  ≥  dᵢ    for i = 1, …, n
+  ∑ᵢ₌₁ⁿ aᵢ xᵢₖ ≤  L · yₖ   for k = 1, …, K
+  yₖ ∈ {0, 1}        for k = 1, …, K
+  xᵢₖ ∈ ℤ₊            for all i = 1, …, n and k = 1, …, K
+        </pre>
+        <p>
+          Here, <code>yₖ = 1</code> indicates that the k-th large sheet is used, and <code>xᵢₖ</code> represents the number of pieces of length <code>a<sub>i</sub></code> obtained from it. <code>K</code> is an upper bound on the number of sheets required. Note that this initial IP model can be quite inefficient due to the potentially large number of inequalities and variables.
+        </p>
+        <p>
+          A better formulation considers <em>cutting patterns</em>. A cutting pattern is a vector (of the same length as <code>a</code>) where the i-th entry tells how many pieces of size <code>a<sub>i</sub></code> are produced. The pattern is valid if all entries are non-negative integers and satisfy <code>a · k ≤ L</code>. Let <code>A</code> be the matrix whose columns contain all possible maximal cutting patterns (a pattern is maximal if no additional piece can be added). Suppose there are <code>m</code> maximal patterns and let <code>c</code> be a vector of ones with length <code>m</code>. Then, the CSP can be formulated as:
+        </p>
+        <pre>
+Minimize:    z = c · x
+Subject to:  A x ≥ d
+             x ∈ ℤ₊ᵐ
+        </pre>
+
+        <h2>Algorithms and Implementation</h2>
+        <h3>Branch and Bound</h3>
+        <p>
+          Branch and Bound is a standard approach for solving integer programs and can be seen as a brute-force method. Below is an implementation tailored for the CSP (with some helper functions assumed to be defined elsewhere):
+        </p>
+        <pre><code class="python">
+import numpy as np
+from scipy.optimize import linprog
+import math
+
+def branch_and_bound(c, A, b, tx, tfun):
+    # Returns the best solution (lp.x) and its objective value (lp.fun)
+    # Initialization: tx = [[0]], tfun = [float('inf')]
+    """
+    Expects an LP with a feasible solution.
+    Similar to scipy.optimize.linprog, it minimizes the objective.
+    
+    tx is a list with one element (a numpy ndarray) and is shared.
+    tfun is the current best objective value.
+    
+    Linear relaxations are solved using scipy.optimize.linprog.
+    """
+    res = linprog(c, A, b, method='highs')
+    if not res.success:
+        return tx[0], tfun[0]
+    
+    # Prune branch if the relaxed objective is worse than the best known.
+    if res.fun > tfun[0]:
+        return tx[0], tfun[0]
+    
+    # If the solution is integer, update the best solution.
+    if is_integer_array(res.x):
+        if res.fun < tfun[0]:
+            tfun[0] = res.fun
+            tx[0] = res.x
+        return tx[0], tfun[0]
+    
+    # Branch on the first non-integer variable.
+    i = first_non_integer_index(res.x)
+    
+    # Branch with constraint x[i] ≥ ceil(res.x[i])
+    new_row_ge = np.zeros(len(c))
+    new_row_ge[i] = -1
+    A_ge = np.append(A, [new_row_ge], axis=0)
+    b_ge = np.append(b, -math.ceil(res.x[i]))
+    branch_and_bound(c, A_ge, b_ge, tx, tfun)
+    
+    # Branch with constraint x[i] ≤ floor(res.x[i])
+    new_row_le = np.zeros(len(c))
+    new_row_le[i] = 1
+    A_le = np.append(A, [new_row_le], axis=0)
+    b_le = np.append(b, math.floor(res.x[i]))
+    branch_and_bound(c, A_le, b_le, tx, tfun)
+    
+    return tx[0], tfun[0]
+
+def csp_branch_and_bound(a, d, L):
+    """
+    Main function that uses branch and bound to solve the Cutting Stock Problem.
+    """
+    coeffs = cp_csp(a, d, L)
+    TX = [[0]]
+    TFUN = [float('inf')]
+    solution = branch_and_bound(coeffs[0], -coeffs[1], -coeffs[2], TX, TFUN)
+    return solution[1]
+
+def csp_scipy_integrality(a, d, L):
+    """
+    Solves the Cutting Stock Problem using scipy.optimize.linprog with integrality constraints.
+    """
+    coeffs = cp_csp(a, d, L)
+    res = linprog(coeffs[0], -coeffs[1], -coeffs[2], integrality=1)
+    return res.fun
+        </code></pre>
+        <p>
+          <em>Note:</em> Functions such as <code>is_integer_array</code>, <code>first_non_integer_index</code>, and <code>cp_csp</code> are assumed to be defined elsewhere.
+        </p>
+        
+        <h3>Column Generation</h3>
+        <p>
+          Column Generation was originally developed for the CSP and later applied to other problems. The idea is to start with a limited set of basic columns—each corresponding to a cutting pattern that uses the maximum number of pieces of one type—and then iteratively add a new column that improves the objective value.
+          To decide which column to add, one solves a knapsack problem based on the dual values from the LP relaxation. Although this method provides a good approximation, it does not always guarantee the optimal integer solution. For an exact solution, one could apply branch-and-price methods.
+        </p>
+        <pre><code class="python">
+import numpy as np
+from scipy.optimize import linprog
+from knapsack import knapsack
+
+def csp_generating_columns(a, d, L):
+    """
+    Solves the Cutting Stock Problem using the column generation method.
+    Begins with basic columns where each column uses the maximum
+    number of pieces of a particular length.
+    Iteratively adds columns based on solving a knapsack problem until no
+    column with a negative reduced cost is found.
+    """
+    n = len(a)
+    # Initialize basic columns
+    columns = []
+    for i in range(n):
+        new_col = np.zeros(n)
+        new_col[i] = L // a[i]
+        if new_col[i] == 0:
+            print("No solution exists: a[i] > L!")
+            return
+        columns.append(new_col)
+    A = np.column_stack(columns)
+    
+    # Objective coefficients
+    c = np.ones(n)
+    
+    # Solve the initial LP relaxation
+    primal = linprog(c=c, A_ub=-A, b_ub=-d)
+    x = primal.x
+    fun_val = primal.fun
+    duals = primal.ineqlin.marginals
+    
+    while True:
+        knapsack_res = knapsack(l=a, L=L, v=-duals)
+        reduced_cost = 1 - knapsack_res[0]
+        if reduced_cost >= 0:
+            break
+        A = np.column_stack((A, knapsack_res[1]))
+        c = np.append(c, 1)
+        primal = linprog(c=c, A_ub=-A, b_ub=-d)
+        x = primal.x
+        if x[-1] < 1e-8:
+            break  # Avoid infinite loop if new column is not used
+        fun_val = primal.fun
+        duals = primal.ineqlin.marginals
+        A = A[:, x > 0]  # Remove non-basic columns
+        x = x[x > 0]
+        c = np.ones(A.shape[1])
+    
+    lower_bound = fun_val
+    x = np.ceil(x)
+    achieved_obj = np.sum(x)
+    
+    return lower_bound, achieved_obj, x, A
+        </code></pre>
+        
+        <h2>Results</h2>
+        <p>
+          The figures below illustrate the performance of the implemented algorithms on various inputs:
+        </p>
+        <div class="text-center">
+          <img src="images/branch-and-bound-prvi-grafik.png" alt="Branch and Bound Performance" class="img-fluid" style="max-width:100%;">
+          <p class="text-muted">Figure 1: Performance of the branch and bound algorithm using generated inputs.</p>
+        </div>
+        <div class="text-center">
+          <img src="images/scipy-prvi-grafik.png" alt="SciPy LP Performance" class="img-fluid" style="max-width:100%;">
+          <p class="text-muted">Figure 2: Performance of scipy.optimize.linprog with integrality=1.</p>
+        </div>
+        <div class="text-center">
+          <img src="images/generating-columns-prvi-grafik.png" alt="Column Generation Performance" class="img-fluid" style="max-width:100%;">
+          <p class="text-muted">Figure 3: Performance of the column generation algorithm.</p>
+        </div>
+        <div class="text-center">
+          <img src="images/gc-aproksimacija-prvi-grafik.png" alt="Column Generation Approximation" class="img-fluid" style="max-width:100%;">
+          <p class="text-muted">Figure 4: Approximation quality of the column generation method compared to the optimal solution. Blue represents the optimal solution, orange represents the lower bound given by the column generation method, and green represents the solution given by the column generation method.</p>
+        </div>
+        
+
+        <h2>Discussion</h2>
+        <p>
+          Although we have not delved deeply into the original IP formulation, it can be useful in certain scenarios (for instance, when large sheets vary in size). For small instances, branch and bound may be more effective. In contrast, column generation scales better for large problems since a one-unit difference in the solution is often less significant.
+          It is important to note that the column generation algorithm is approximate and, in rare cases, may loop indefinitely if a newly added column is not used. Our implementation safeguards against that by terminating when such a scenario is detected.
+        </p>
+        
+        <h2>Additional Materials</h2>
+        <p>
+          The complete code and implementation details are available on 
+          <a href="https://github.com/sandropa/Cutting-stock-problem" target="_blank">GitHub</a>. There you can also find examples of how the functions are used and performance comparisons of the algorithms.
+        </p>
+        
+        <h2>References</h2>
+        <ul>
+          <li>Wolsey, L. A. (2020). Integer Programming.</li>
+          <li>Vance, P. (1998). Branch and Price: A Method for Solving Cutting Stock Problems.</li>
+          <li>David, M. (2008). [Additional reference on column generation]</li>
+        </ul>
+
+        <h2>Appendix: Knapsack Problem</h2>
+        <p>
+          In the column generation method for CSP, a knapsack problem must be solved to determine the optimal column to add. Below is a dynamic programming implementation of the knapsack algorithm that runs in O(L·n), where <code>L</code> is the knapsack capacity and <code>n</code> is the number of item types.
+        </p>
+        <pre><code class="python">
+import numpy as np
+from copy import copy
+
+def knapsack(l, v, L):
+    """
+    Solves the integer knapsack problem.
+    l: list of item sizes
+    v: list of item values
+    L: knapsack capacity
+    Returns a tuple: (objective value, solution vector)
+    """
+    n = len(l)
+    # DP[i] = [max value, solution vector] for capacity i
+    DP = [[0, np.zeros(n)] for _ in range(L + 1)]
+    
+    for i in range(L + 1):
+        for j in range(n):
+            if l[j] <= i:
+                candidate = DP[i - l[j]]
+                if candidate[0] + v[j] > DP[i][0]:
+                    DP[i][0] = candidate[0] + v[j]
+                    DP[i][1] = copy(candidate[1])
+                    DP[i][1][j] += 1
+    return DP[L]
+        </code></pre>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html> 
