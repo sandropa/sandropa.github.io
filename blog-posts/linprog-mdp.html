@@ -17,6 +17,12 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../styles/styles.css">
   <link rel="stylesheet" href="../styles/blog.css">
+  <!-- Add this script immediately after head tag -->
+  <script>
+    // Prevent theme flash
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
 </head>
 <body>
   <header class="sticky">

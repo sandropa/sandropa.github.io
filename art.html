@@ -35,6 +35,13 @@
             }
         }
     </style>
+
+    <!-- Add this script immediately after head tag -->
+    <script>
+        // Prevent theme flash
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+    </script>
 </head>
 
 <body>
