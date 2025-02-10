@@ -1,7 +1,13 @@
 /* Blog post container and typography */
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
 .blog-post {
     font-family: 'Droid Serif', serif;
     color: var(--text-primary);
+    background-color: var(--bg-primary);
 }
 
 /* Container width control */
@@ -51,35 +57,73 @@
     background-color: var(--table-stripe1);
     padding: 2px 4px;
     border-radius: 3px;
+    color: var(--text-primary);
+}
+
+/* Links */
+.blog-post a {
     color: var(--link-color);
-}
-
-/* GitHub button styling */
-.blog-post .github-button {
-    color: var(--accent-color); 
-    text-decoration: none; 
-    border: 1px solid var(--accent-color); 
-    padding: 8px 16px; 
-    border-radius: 4px;
-    transition: opacity 0.2s ease;
-    display: inline-block;
-}
-
-.blog-post .github-button:hover {
-    opacity: 0.8;
     text-decoration: none;
 }
 
-/* Regular GitHub links - for inline text */
-.blog-post .github-link {
-    color: var(--accent-color);
-    text-decoration: none;
-    transition: opacity 0.2s ease;
-}
-
-.blog-post .github-link:hover {
+.blog-post a:hover {
     opacity: 0.8;
     text-decoration: underline;
+}
+
+/* Update button styles */
+.btn-dark {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+    color: var(--text-primary);
+}
+
+.btn-dark:hover {
+    background-color: var(--table-stripe2);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Update GitHub button style */
+.btn-github {
+    background-color: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color) !important;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none !important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-github::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border: 1px solid var(--accent-color);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+    z-index: -1;
+}
+
+.btn-github:hover {
+    color: var(--accent-color) !important;
+    text-decoration: none !important;
+}
+
+.btn-github:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Update text-muted color */
+.text-muted {
+    color: var(--text-secondary) !important;
 }
 
 /* Images */
@@ -101,4 +145,16 @@
     .navbar-nav {
         text-align: center;
     }
+}
+
+/* Update code and math blocks for better contrast */
+.blog-post pre,
+.blog-post code,
+.blog-post .MathJax {
+    color: var(--text-primary) !important;
+}
+
+/* MathJax specific adjustments */
+.MathJax_Display {
+    color: var(--text-primary) !important;
 } 
