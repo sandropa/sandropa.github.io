@@ -17,6 +17,8 @@
     --footer-bg: #6C757D;
     --footer-text: white;
     --description-text: #343A40;
+    --card-bg: white;
+    --card-border: rgba(0,0,0,0.125);
 }
 
 [data-theme="dark"] {
@@ -33,6 +35,8 @@
     --footer-bg: #343a40;
     --footer-text: #f8f9fa;
     --description-text: #d1d5db;
+    --card-bg: #343a40;
+    --card-border: #495057;
 }
 
 /* Da bih napravio responzivan navbar koristio sam ovo https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
@@ -579,5 +583,29 @@ footer a {
 [data-theme="dark"] #ed_duration2,
 [data-theme="dark"] #ed_duration3 {
     grid-column: 1;
+}
+
+/* Add these card styles */
+.card {
+    background-color: var(--card-bg);
+    border-color: var(--card-border);
+}
+
+.card-body {
+    color: var(--text-primary);
+}
+
+.card-title {
+    color: var(--text-primary);
+}
+
+.card-text {
+    color: var(--text-secondary);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
