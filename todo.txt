@@ -1,18 +1,3 @@
-Ne izgleda okej kada na okrenutom mobitelu (index), slika postane ovalna, tekstovi ispod zavrse na pola ekrana umjesto od pola ekrana umjeto preko citavog.
-
-Na laptopu, moja slika je previse lijevo
-
-Dodati mozda rjesavanje lpa u JS, tako da 
-mogu animirati kako se mijenja kroz vrijeme
-policy.
-
-Ne zapocinjati sa linearnim programiranje
-vec sa problemom. sjetiti se onog sa
-smoking gun sto je spominjao grant
-sanderson
-fino napisati ovo
-
-dodati svoje crteze
-i ai animacije i sl 
-
-mozda croppati ovog malog robota i koristiti ga za animacije
+kada kliknem na link u navbaru, za about ostane crn tekst u dark modeu
+a za ostale stvari ne, mozda dodati ono da prati
+gdje sam na stranici i da je taj link oznacen
