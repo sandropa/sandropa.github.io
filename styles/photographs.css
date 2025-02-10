@@ -6,53 +6,56 @@ body {
 }
 
 main {
-    position: relative; /* Allow positioning of the pseudo-element */
-    display: flex;
-    justify-content: center;
     padding: 20px;
-    overflow: hidden; /* Prevent overflow if the image is larger than the container */
-}
-
-main::before {
-    content: '';
-    position: absolute; /* Position the overlay absolutely */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url('/art/1_tb_bw_rain.jpg'); /* Set your background image path */
-    background-size: cover; /* Cover the entire main area */
-    background-position: center; /* Center the background image */
-    opacity: 0.4; /* Set the opacity (0.0 to 1.0) */
-    z-index: 0; /* Place behind other content */
+    background-color: var(--bg-color);
 }
 
 .gallery {
-    display: flex;
-    flex-wrap: wrap; /* Allow items to wrap to a new row */
-    justify-content: center; /* Center the items */
-    gap: 10px; /* Space between images */
-    position: relative; /* Create a new stacking context */
-    z-index: 1; /* Place above the background */
+    columns: 3 300px;
+    column-gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-.photo, .video {
-    flex: 1 1 600px; /* Allow items to grow, shrink, and set a base width */
-    max-width: 600px; /* Limit the maximum width of each image */
-    margin: 25px;
+.photo {
+    break-inside: avoid;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+    position: relative;
 }
 
-.photo .photo_info {
-    color:black;
-    font-size: large;
-    padding: 10px;
+.photo:hover {
+    transform: translateY(-5px);
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+.photo_info {
+    margin-top: 0.5rem;
+    color: var(--text-color);
+    font-size: 0.9rem;
     text-align: center;
-    /* font-weight: bold; */
 }
 
-.photo img, .video video {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    box-shadow: 0px 5px 10px #1f2123;
+@media (max-width: 900px) {
+    .gallery {
+        columns: 2 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gallery {
+        columns: 1;
+    }
+    
+    main {
+        padding: 10px;
+    }
 }
