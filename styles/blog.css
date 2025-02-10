@@ -53,12 +53,12 @@
     color: #3872b2;
 }
 
-/* GitHub button - for the main project link */
+/* GitHub button styling */
 .blog-post .github-button {
-    color: #F13C20;
-    text-decoration: none;
-    border: 1px solid #F13C20;
-    padding: 8px 16px;
+    color: #F13C20; 
+    text-decoration: none; 
+    border: 1px solid #F13C20; 
+    padding: 8px 16px; 
     border-radius: 4px;
     transition: opacity 0.2s ease;
     display: inline-block;
