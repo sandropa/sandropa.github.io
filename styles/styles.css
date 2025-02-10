@@ -31,13 +31,14 @@ h1, h2, h3, h4, h5, h6 {
 
 #profile_and_contact {
     margin-top: 60px;
-    margin-left: 10px;
-    margin-right: 5px;
+    padding: 0 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex: 1 1 400px;
+    max-width: 400px;
 }
 
 #profile_image img {
@@ -154,6 +155,9 @@ h1, h2, h3, h4, h5, h6 {
 
 #currently_thinking_about {
     padding: 30px;
+    flex: 1 1 400px;
+    max-width: 600px;
+    margin-top: 60px;
 }
 
 #currently_thinking_about h2 {
@@ -172,6 +176,10 @@ h1, h2, h3, h4, h5, h6 {
 #home {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 #profile_and_contact, #currently_thinking_about {
@@ -441,10 +449,17 @@ footer a {
     #profile_and_contact {
         margin: 20px auto;
         width: 100%;
+        max-width: 100%;
+    }
+    
+    #currently_thinking_about {
+        margin-top: 20px;
+        padding: 15px;
     }
     
     #home {
         flex-direction: column;
+        align-items: center;
     }
 }
 
