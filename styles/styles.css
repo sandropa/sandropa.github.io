@@ -183,7 +183,7 @@ h1, h2, h3, h4, h5, h6 {
 #news {
     margin-top: 20px;
     padding: 30px;
-    color: #6C757D;
+    color: var(--text-primary);
     font-style: italic;
 }
 
@@ -471,11 +471,11 @@ footer a {
 }
 
 #news li::marker {
-    color: #3872b2;
+    color: var(--link-color);
 }
 
 #news li .date {
-    color: #3872b2;
+    color: var(--link-color);
     margin-right: 5px;
 }
 
@@ -608,4 +608,3 @@ footer a {
     transition: transform 0.2s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
-
