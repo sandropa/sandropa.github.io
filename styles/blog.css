@@ -1,0 +1,103 @@
+/* Blog post container and typography */
+.blog-post {
+    font-family: 'Droid Serif', serif;
+}
+
+/* Container width control */
+.container {
+    width: 100%;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 900px; /* Set a max width for large screens */
+    }
+}
+
+/* Headers */
+.blog-post h1, 
+.blog-post h2, 
+.blog-post h3, 
+.blog-post h4, 
+.blog-post h5, 
+.blog-post h6 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+/* Paragraphs */
+.blog-post p {
+    text-align: justify;
+}
+
+/* Code blocks */
+.blog-post pre {
+    background: #f8f9fa;
+    padding: 1rem;
+    overflow-x: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}
+
+.blog-post code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    color: #3872b2;
+}
+
+/* Inline code */
+.blog-post p code, 
+.blog-post li code {
+    background-color: #f8f9fa;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: #3872b2;
+}
+
+/* GitHub button - for the main project link */
+.blog-post .github-button {
+    color: #F13C20;
+    text-decoration: none;
+    border: 1px solid #F13C20;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: opacity 0.2s ease;
+    display: inline-block;
+}
+
+.blog-post .github-button:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+/* Regular GitHub links - for inline text */
+.blog-post .github-link {
+    color: #F13C20;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.blog-post .github-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Images */
+.blog-post img {
+    max-width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.blog-post .img-caption {
+    text-align: center;
+    color: #6c757d;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 576px) {
+    .navbar-nav {
+        text-align: center;
+    }
+} 
