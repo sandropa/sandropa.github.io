@@ -548,3 +548,36 @@ footer a {
     color: var(--footer-text);
 }
 
+/* Add this to your existing styles */
+[data-theme="dark"] #logo1,
+[data-theme="dark"] #logo2,
+[data-theme="dark"] #ed_logo1,
+[data-theme="dark"] #ed_logo2,
+[data-theme="dark"] #ed_logo3 {
+    display: none;
+}
+
+/* Adjust grid layout when logos are hidden */
+[data-theme="dark"] .teaching_grid,
+[data-theme="dark"] .education_and_research_grid {
+    grid-template-columns: auto;
+}
+
+[data-theme="dark"] #name1,
+[data-theme="dark"] #name2,
+[data-theme="dark"] #description1,
+[data-theme="dark"] #description2,
+[data-theme="dark"] #duration1,
+[data-theme="dark"] #duration2,
+[data-theme="dark"] #ed_name1,
+[data-theme="dark"] #ed_name2,
+[data-theme="dark"] #ed_name3,
+[data-theme="dark"] #ed_description1,
+[data-theme="dark"] #ed_description2,
+[data-theme="dark"] #ed_description3,
+[data-theme="dark"] #ed_duration1,
+[data-theme="dark"] #ed_duration2,
+[data-theme="dark"] #ed_duration3 {
+    grid-column: 1;
+}
+
