@@ -2,22 +2,54 @@
 /* https://coolors.co/d79922-efe2ba-f13c20-3872b2-c5cbe3 */
 /* https://coolors.co/palette/f8f9fa-e9ecef-dee2e6-ced4da-adb5bd-6c757d-495057-343a40-212529 */
 
+/* At the top of the file, after the color comments */
+:root {
+    /* Light theme colors */
+    --bg-primary: white;
+    --text-primary: #212529;
+    --text-secondary: #6C757D;
+    --accent-color: #F13C20;
+    --link-color: #3872b2;
+    --nav-bg: #f8f9fa;
+    --table-stripe1: #F8F9FA;
+    --table-stripe2: #E9ECEF;
+    --border-color: #CED4DA;
+    --footer-bg: #6C757D;
+    --footer-text: white;
+}
+
+[data-theme="dark"] {
+    /* Dark theme colors */
+    --bg-primary: #212529;
+    --text-primary: #f8f9fa;
+    --text-secondary: #adb5bd;
+    --accent-color: #F13C20;
+    --link-color: #7cb0eb;
+    --nav-bg: #343a40;
+    --table-stripe1: #343a40;
+    --table-stripe2: #495057;
+    --border-color: #495057;
+    --footer-bg: #343a40;
+    --footer-text: #f8f9fa;
+}
+
 /* Da bih napravio responzivan navbar koristio sam ovo https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
 
 * {
     box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
     font-family: 'Roboto';
-    color: #212529;
-    background-color: white;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     margin: 0;
 }
 
 header {
     z-index: 1000;
-    color: #212529;
+    color: var(--text-primary);
 }
 
 .content {
@@ -26,7 +58,7 @@ header {
 
 h1, h2, h3, h4, h5, h6 {
     /* color: #4056A1; */
-    color: #3872b2;
+    color: var(--link-color);
 }
 
 #profile_and_contact {
@@ -461,5 +493,56 @@ footer a {
         flex-direction: column;
         align-items: center;
     }
+}
+
+/* Add this to your existing styles */
+#theme-toggle {
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    color: var(--accent-color);
+}
+
+/* Update navbar styles */
+.navbar {
+    background-color: var(--nav-bg) !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--text-primary);
+}
+
+/* Update table styles */
+tr:nth-child(even) {
+    background-color: var(--table-stripe1);
+}
+
+tr:nth-child(odd) {
+    background-color: var(--table-stripe2);
+}
+
+td, th {
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+}
+
+/* Update footer styles */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+footer h3 {
+    color: var(--footer-text);
+}
+
+footer a {
+    color: var(--footer-text);
 }
 

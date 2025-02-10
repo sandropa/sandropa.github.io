@@ -30,7 +30,7 @@
 <body>
     <header class="sticky">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="/index.html" style="color: #F13C20">Sandro Paradžik</a>
+            <a class="navbar-brand" href="/index.html" style="color: var(--accent-color)">Sandro Paradžik</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,14 +40,19 @@
                     <li class="nav-item"><a class="nav-link" href="/index.html#news">News</a></li>
                     <li class="nav-item"><a class="nav-link" href="/blog.html">Blog</a></li>
                     <li class="nav-item"><a class="nav-link" href="/art.html">Photographs</a></li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-link nav-link">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <div class="container mt-5">
-        <h1 class="text-center mb-4" style="font-weight: normal; font-size: 3rem; color: black;">Welcome to My Blog!</h1>
-        <p class="text-center mb-5">Exploring topics I find interesing.</p>
+        <h1 class="text-center mb-4" style="font-weight: normal; font-size: 3rem; color: var(--text-primary)">Welcome to My Blog!</h1>
+        <p class="text-center mb-5" style="color: var(--text-secondary)">Exploring topics I find interesting.</p>
         <div class="row">
             <div class="col-md-4">
                 <div class="card mb-4">
@@ -100,6 +105,28 @@
                 });
             });
         });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        document.documentElement.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            themeIcon.className = theme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
+        }
     </script>
 </body>
 </html>
