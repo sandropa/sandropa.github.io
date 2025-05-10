@@ -56,7 +56,7 @@ author:
 ## => GitHub Repository (if the site is hosted by GitHub)
 ##############################
 repository: sandropa/sandropa.github.io
-repository_tree: main
+repository_tree: master
 
 
 ## => Paths
