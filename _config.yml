@@ -16,11 +16,11 @@
 
 ## => Site Settings
 ##############################
-text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
-highlight_theme: tomorrow-night-eighties # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
+text_skin: # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
+highlight_theme: # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : Sandro's blog
+title   : sandro's blog
 description: > # this means to ignore newlines until "Language & timezone"
   Sandro Paradžik's personal website and blog. Exploring mathematics, artificial intelligence (AI), machine learning (ML), and theoretical computer science. Includes CV and project insights.
 
@@ -211,7 +211,7 @@ defaults:
       license: true
       aside:
         toc: true
-      show_edit_on_github: true
+      show_edit_on_github: false
       show_subscribe: true
       pageview: true
 
