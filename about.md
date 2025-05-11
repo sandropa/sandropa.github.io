@@ -3,6 +3,11 @@ layout: article # Or 'article' if you prefer the TeXt styling for it and it fits
 title: About Me
 ---
 
+<!-- Add this image block -->
+<img src="/assets/images/sandro.jpg" alt="Sandro Paradžik" style="float: right; margin: 0 0 1em 1em; width: 200px; border-radius: 50%;"> 
+<!-- Adjust width, border-radius, and margins as needed -->
+<!-- For float: left, use margin: 0 1em 1em 0; -->
+
 Hi, I'm Sandro Paradžik. Welcome to my personal website!
 
 I'm currently a BSc student in Theoretical Computer Science at the University of Sarajevo (expected graduation: July 2025). My core academic and professional interests lie at the vibrant intersection of **Mathematics, Artificial Intelligence (AI), and Machine Learning (ML)**.
