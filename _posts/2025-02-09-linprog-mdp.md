@@ -3,8 +3,7 @@ layout: article
 title: Solving Markov Decision Processes Using Linear Programming
 date: 2025-02-09 00:00:00 +0000 # Add a time and timezone if you like
 math: true # Changed from mathjax: true as TeXt usually uses 'math: true'
-categories: [AI, Reinforcement Learning, Optimization] # Example categories
-tags: [MDP, Linear Programming, Python, CVXPY, Bellman Equations] # Example tags
+tags: [math, MDP, linear programming] # Example tags
 # image: /assets/images/posts/linprog-mdp/robot-mdp.webp # Example featured image (you'll need to add this)
 # You can also add an 'excerpt' if you want a custom summary for list pages
 # excerpt: "This post explores solving a recycling robot MDP using linear programming and Python's CVXPY library, based on Bellman optimality equations."

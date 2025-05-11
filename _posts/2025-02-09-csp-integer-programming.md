@@ -3,8 +3,7 @@ layout: article
 title: Solving the Cutting Stock Problem - Integer Programming and Column Generation
 date: 2025-02-09 01:00:00 +0000 # ADJUST DATE/TIME TO BE UNIQUE
 math: true
-categories: [Optimization, Operations Research] # Example categories
-tags: [Cutting Stock Problem, Integer Programming, Column Generation, Python, SciPy] # Example tags
+tags: [math, integer programming, linear programming] # Example tags
 # image: /assets/images/posts/csp-integer-programming/paper-icon.webp # Example featured image
 # excerpt: "Comparing integer programming and column generation for the 1D Cutting Stock Problem, including Python implementations and performance insights."
 ---
