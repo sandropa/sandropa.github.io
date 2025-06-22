@@ -14,8 +14,10 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
 
 * Deep learning
 * Progam synthesis
+* Dynamical systems
 * LLMs
 * Mathematics (combinatorics, linear algebra, graph theory, etc.)
+* Neuroscience
 
 #### Contact:
 
