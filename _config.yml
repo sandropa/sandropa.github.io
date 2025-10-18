@@ -20,9 +20,9 @@ text_skin: # "default" (default), "dark", "forest", "ocean", "chocolate", "orang
 highlight_theme: # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
-title   : sandro's blog
+title   : sandro's digital space
 description: > # this means to ignore newlines until "Language & timezone"
-  Sandro Paradžik's personal website and blog. Exploring mathematics, artificial intelligence (AI), machine learning (ML), and theoretical computer science. Includes CV and project insights.
+  Sandro Paradžik's personal website. Exploring mathematics, artificial intelligence (AI), machine learning (ML), and theoretical computer science. Includes CV and project insights.
 
 
 ## => Language and Timezone

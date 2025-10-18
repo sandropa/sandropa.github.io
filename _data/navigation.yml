@@ -1,9 +1,5 @@
 header:
-  - title: Archive
-    url: /archive.html
   - title: CV
-    url: /assets/pdf/cv_main.pdf
+    url: /assets/pdf/cv_sandro.pdf
     external: true
-  - title: About
-    url: /about.html
 

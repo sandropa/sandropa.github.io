@@ -1,6 +1,7 @@
 ---
 layout: article # Or 'article' if you prefer the TeXt styling for it and it fits
 title: About Me
+permalink: /
 ---
 
 <!-- Add this image block -->
