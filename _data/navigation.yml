@@ -1,5 +1,5 @@
 header:
   - title: CV
     url: /cv/
-    external: true
+    external: false
 
