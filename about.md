@@ -22,6 +22,6 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
 
 #### Contact:
 
-*   [sandro.paradzik@gmail.com](mailto:sandro.paradzik@gmail.com)
-*   [GitHub](https://github.com/sandropa)
-*   [LinkedIn](https://www.linkedin.com/in/sandropa/)
+*   [sandro.paradzik@gmail.com](mailto:sandro.paradzik@gmail.com){:target="_blank"}
+*   [GitHub](https://github.com/sandropa){:target="_blank"}
+*   [LinkedIn](https://www.linkedin.com/in/sandropa/){:target="_blank"}
