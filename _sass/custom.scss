@@ -84,25 +84,32 @@
 
 // Photographs
 .image-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  column-count: 3;
+  column-gap: 20px;
 }
 
 .image-gallery figure {
-  margin: 0;
+  break-inside: avoid;
+  margin: 0 0 20px;
 }
 
 .image-gallery img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
-.image-gallery figcaption {
-  text-align: center;
-  font-size: 0.9em;
-  color: #777;
-  margin-top: 5px;
+/* Make it responsive */
+@media (max-width: 1200px) {
+  .image-gallery {
+    column-count: 2;
+  }
 }
+
+@media (max-width: 700px) {
+  .image-gallery {
+    column-count: 1;
+  }
+}
+
