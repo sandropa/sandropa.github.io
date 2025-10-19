@@ -94,3 +94,43 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
   </div>
 </div>
 
+---
+
+## Photographs
+
+<div class="image-gallery">
+  <figure>
+    <img src="/assets/images/photographs/1_tb_bw_rain_small.jpg" alt="Rainy day in black and white">
+    <figcaption>Photo 1</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/2021_0505_photo1_small.jpeg" alt="Photo 1 from 2021-05-05">
+    <figcaption>Photo 2</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/2021_0505_photo2_small.jpeg" alt="Photo 2 from 2021-05-05">
+    <figcaption>Photo 3</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/foggy_small.jpg" alt="Foggy landscape">
+    <figcaption>Photo 4</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/mostar1_small.jpg" alt="Mostar">
+    <figcaption>Photo 5</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/sarajevo_cat_1_small.jpg" alt="Cat in Sarajevo">
+    <figcaption>Photo 6</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/skate1_small.jpg" alt="Skateboarding">
+    <figcaption>Photo 7</figcaption>
+  </figure>
+  <figure>
+    <img src="/assets/images/photographs/sarajevo_shadow1.webp" alt="Shadow in Sarajevo">
+    <figcaption>Photo 8</figcaption>
+  </figure>
+</div>
+
+

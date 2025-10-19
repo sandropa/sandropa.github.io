@@ -81,3 +81,28 @@
   color: #555;
   margin: 0;
 }
+
+// Photographs
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.image-gallery figure {
+  margin: 0;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.image-gallery figcaption {
+  text-align: center;
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 5px;
+}
