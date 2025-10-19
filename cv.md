@@ -1,6 +1,7 @@
 ---
 layout: page
 title: CV
+permalink: /cv/
 ---
 
 <a href="/assets/pdf/cv_sandro.pdf" target="_blank">PDF Version</a>
