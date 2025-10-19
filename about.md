@@ -25,3 +25,47 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
 *   [sandro.paradzik@gmail.com](mailto:sandro.paradzik@gmail.com){:target="_blank"}
 *   [GitHub](https://github.com/sandropa){:target="_blank"}
 *   [LinkedIn](https://www.linkedin.com/in/sandropa/){:target="_blank"}
+
+---
+
+## Favourite Books
+
+<div class="book-cards-container">
+  <div class="book-card">
+    <img src="/assets/images/book.png" alt="Book Cover">
+    <div class="book-info">
+      <p class="book-title">Book Title</p>
+      <p class="book-author">Author Name</p>
+    </div>
+  </div>
+  <div class="book-card">
+    <img src="/assets/images/book.png" alt="Book Cover">
+    <div class="book-info">
+      <p class="book-title">Book Title</p>
+      <p class="book-author">Author Name</p>
+    </div>
+  </div>
+  <div class="book-card">
+    <img src="/assets/images/book.png" alt="Book Cover">
+    <div class="book-info">
+      <p class="book-title">Book Title</p>
+      <p class="book-author">Author Name</p>
+    </div>
+  </div>
+  <div class="book-card">
+    <img src="/assets/images/book.png" alt="Book Cover">
+    <div class="book-info">
+      <p class="book-title">Book Title</p>
+      <p class="book-author">Author Name</p>
+    </div>
+  </div>
+  <div class="book-card">
+    <img src="/assets/images/book.png" alt="Book Cover">
+    <div class="book-info">
+      <p class="book-title">Book Title</p>
+      <p class="book-author">Author Name</p>
+    </div>
+  </div>
+</div>
+
+
