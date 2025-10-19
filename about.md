@@ -32,38 +32,31 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
 
 <div class="book-cards-container">
   <div class="book-card">
-    <img src="/assets/images/book.png" alt="Book Cover">
+    <img src="/assets/images/book_a_brief_history_of_intelligence.png" alt="Book Cover">
     <div class="book-info">
-      <p class="book-title">Book Title</p>
-      <p class="book-author">Author Name</p>
+      <p class="book-title">A Brief History of Intelligence</p>
+      <p class="book-author">Max Bennett</p>
     </div>
   </div>
   <div class="book-card">
-    <img src="/assets/images/book.png" alt="Book Cover">
+    <img src="/assets/images/book_why_greatness_cannot_be_planned.png" alt="Book Cover">
     <div class="book-info">
-      <p class="book-title">Book Title</p>
-      <p class="book-author">Author Name</p>
+      <p class="book-title">Why Greatness Cannot Be Planned</p>
+      <p class="book-author">Kenneth O. Stanley, Joel Lehman</p>
     </div>
   </div>
   <div class="book-card">
-    <img src="/assets/images/book.png" alt="Book Cover">
+    <img src="/assets/images/book_brave_new_world.png" alt="Book Cover">
     <div class="book-info">
-      <p class="book-title">Book Title</p>
-      <p class="book-author">Author Name</p>
+      <p class="book-title">Brave New World</p>
+      <p class="book-author">Aldous Huxley</p>
     </div>
   </div>
   <div class="book-card">
-    <img src="/assets/images/book.png" alt="Book Cover">
+    <img src="/assets/images/book_a_thousand_brains.png" alt="Book Cover">
     <div class="book-info">
-      <p class="book-title">Book Title</p>
-      <p class="book-author">Author Name</p>
-    </div>
-  </div>
-  <div class="book-card">
-    <img src="/assets/images/book.png" alt="Book Cover">
-    <div class="book-info">
-      <p class="book-title">Book Title</p>
-      <p class="book-author">Author Name</p>
+      <p class="book-title">A Thousand Brains</p>
+      <p class="book-author">Jeff Hawkins</p>
     </div>
   </div>
 </div>
