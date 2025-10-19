@@ -17,7 +17,8 @@
 
 .book-card img {
   width: 80px; /* Smaller, fixed width for the image */
-  height: auto;
+  height: 120px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
   border-radius: 4px;
   margin-right: 25px; /* Space between image and text */
 }
@@ -58,7 +59,8 @@
 
 .movie-card img {
   width: 80px; /* Smaller, fixed width for the image */
-  height: auto;
+  height: 120px; /* Fixed height for the image (same as books) */
+  object-fit: cover; /* Ensures the image covers the area, cropping if necessary */
   border-radius: 4px;
   margin-right: 25px; /* Space between image and text */
 }
