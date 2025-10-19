@@ -1,5 +1,4 @@
-/* start custom scss snippet */
-
+// Books
 .book-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -40,4 +39,43 @@
   margin: 0;
 }
 
-/* end custom scss snippet */
+// Movies
+.movie-cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.movie-card {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.movie-card:hover {
+  transform: translateY(-3px);
+}
+
+.movie-card img {
+  width: 80px; /* Smaller, fixed width for the image */
+  height: auto;
+  border-radius: 4px;
+  margin-right: 25px; /* Space between image and text */
+}
+
+.movie-info {
+  text-align: left; /* Align text to the left */
+  line-height: 1.4;
+}
+
+.movie-title {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 0 5px 0;
+}
+
+.movie-director {
+  font-size: 0.9em;
+  color: #555;
+  margin: 0;
+}

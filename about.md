@@ -61,4 +61,36 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
   </div>
 </div>
 
+## Favorite Movies
+
+<div class="movie-cards-container">
+  <div class="movie-card">
+    <img src="/assets/images/movie_true_romance_2.png">
+    <div class="movie-info">
+      <p class="movie-title">True Romance</p>
+      <p class="movie-director">Tony Scott</p>
+    </div>
+  </div>
+  <div class="movie-card">
+    <img src="/assets/images/movie_shutter_island.png" alt="Movie Cover">
+    <div class="movie-info">
+      <p class="movie-title">Shutter Island</p>
+      <p class="movie-director">Martin Scorsese</p>
+    </div>
+  </div>
+  <div class="movie-card">
+    <img src="/assets/images/movie_dr_strangelove.png" alt="Movie Cover">
+    <div class="movie-info">
+      <p class="movie-title">Dr. Strangelove</p>
+      <p class="movie-director">Stanley Kubrick</p>
+    </div>
+  </div>
+  <div class="movie-card">
+    <img src="/assets/images/movie_inception.png" alt="Movie Cover">
+    <div class="movie-info">
+      <p class="movie-title">Inception</p>
+      <p class="movie-director">Christopher Nolan</p>
+    </div>
+  </div>
+</div>
 
