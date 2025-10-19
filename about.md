@@ -28,7 +28,7 @@ Hi, I'm Sandro Paradžik. Welcome to my personal website!
 
 ---
 
-## Favourite Books
+## Favorite Books
 
 <div class="book-cards-container">
   <div class="book-card">
