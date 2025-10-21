@@ -32,7 +32,7 @@ permalink: /cv/
 - **Mediterranean Machine Learning Summer School** (Split, 8-12 Sep 2025)
 - **Eastern European Machine Learning Summer School** (Sarajevo, 21-26 Jul 2025)
 
-### Selected Awards from Math Competitions
+## Selected Awards from Math Competitions
 - **Mediterranean Mathematics Competition**: Bronze, HM, Bronze (2021, 2019, 2018)
 - **Federation of Bosnia and Herzegovina**: Ranked 2nd, 1st, 3rd (2021, 2019, 2018)
 
