@@ -9,9 +9,7 @@ permalink: /cv/
 ## Experience
 
 #### Machine Learning Intern @ ModelCat
-*San Francisco Bay Area (Remote), Aug - Oct 2025*
-- Advanced the development of an AutoML system for computer vision applications specifically for edge devices.
-- Focused on enhancing machine learning algorithms and optimizing the ML pipeline for improved performance and efficiency.
+*San Francisco Bay Area (Remote), Aug 2025 - Present*
 
 #### Lecturer @ Math School for Gifted Students
 *Sarajevo, 2022 - Present*
