@@ -9,16 +9,13 @@ permalink: /
 <!-- Adjust width, border-radius, and margins as needed -->
 <!-- For float: left, use margin: 0 1em 1em 0; -->
 
-Hi, I'm Sandro Paradžik. Welcome to my personal website!
+Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, where we work on automating the creation of ML models for edge devices, mainly for computer vision. I live in Sarajevo and recently completed my Bachelor's in CS at the University of Sarajevo. In high school, I competed in mathematics and now I regularly give lectures to students preparing for competitions.
 
 #### Main interests:
 
-* Deep learning
-* Progam synthesis
-* Dynamical systems
-* LLMs
-* Mathematics (combinatorics, linear algebra, graph theory, etc.)
-* Neuroscience
+* AutoML
+* Deep Learning
+* Combinatorial optimization
 
 #### Contact:
 
