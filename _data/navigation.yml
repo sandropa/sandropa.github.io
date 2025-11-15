@@ -1,5 +1,7 @@
 header:
   - title: CV
-    url: /cv/
-    external: false
+    url: "/assets/pdf/cv_sandro.pdf"
+    external: True
+  - title: Archive
+    url: /archive.html
 
