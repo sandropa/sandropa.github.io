@@ -95,6 +95,8 @@ Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, 
 
 ## Photographs
 
+I like photography and believe art is very important. Here are some photographs I have taken over the years.
+
 <div class="image-gallery">
   <figure>
     <img src="/assets/images/photographs/1_tb_bw_rain_small.jpg" alt="photo">
