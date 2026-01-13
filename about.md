@@ -11,21 +11,13 @@ permalink: /
 
 Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, where we work on automating the creation of ML models for edge devices, mainly for computer vision. I live in Sarajevo and recently completed my Bachelor's in CS at the University of Sarajevo. In high school, I competed in mathematics and now I regularly give lectures to students preparing for competitions.
 
-#### Main interests:
-
-* AutoML
-* Deep Learning
-* Combinatorial optimization
-
-#### Contact:
+### Contact
 
 *   [sandro.paradzik@gmail.com](mailto:sandro.paradzik@gmail.com){:target="_blank"}
 *   [GitHub](https://github.com/sandropa){:target="_blank"}
 *   [LinkedIn](https://www.linkedin.com/in/sandropa/){:target="_blank"}
 
----
-
-## Favorite Books
+### Favorite Books
 
 <div class="book-cards-container">
   <div class="book-card">
@@ -58,7 +50,7 @@ Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, 
   </div>
 </div>
 
-## Favorite Movies
+### Favorite Movies
 
 <div class="movie-cards-container">
   <div class="movie-card">
@@ -91,9 +83,7 @@ Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, 
   </div>
 </div>
 
----
-
-## Photographs
+### Photographs
 
 I like photography and believe art is very important. Here are some photographs I have taken over the years.
 
@@ -124,4 +114,13 @@ I like photography and believe art is very important. Here are some photographs 
   </figure>
 </div>
 
-
+### Blog
+coming soon...
+<ul class="blog-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
