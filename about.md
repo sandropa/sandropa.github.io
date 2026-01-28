@@ -13,7 +13,7 @@ Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, 
 
 ### Contact
 
-*   [sandro.paradzik@gmail.com](mailto:sandro.paradzik@gmail.com){:target="_blank"}
+*   [sandropa@hey.com](mailto:sandropa@hey.com){:target="_blank"}
 *   [GitHub](https://github.com/sandropa){:target="_blank"}
 *   [LinkedIn](https://www.linkedin.com/in/sandropa/){:target="_blank"}
 
@@ -115,6 +115,7 @@ I like photography and believe art is very important. Here are some photographs 
 </div>
 
 ### Blog
+coming soon...
 <ul class="blog-list">
   {% for post in site.posts %}
     <li>
