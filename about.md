@@ -115,7 +115,6 @@ I like photography and believe art is very important. Here are some photographs 
 </div>
 
 ### Blog
-coming soon...
 <ul class="blog-list">
   {% for post in site.posts %}
     <li>
