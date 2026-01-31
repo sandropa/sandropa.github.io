@@ -114,7 +114,7 @@ I like photography and believe art is very important. Here are some photographs 
   </figure>
 </div>
 
-### Blog
+<!-- ### Blog
 coming soon...
 <ul class="blog-list">
   {% for post in site.posts %}
@@ -123,4 +123,4 @@ coming soon...
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
   {% endfor %}
-</ul>
+</ul> -->

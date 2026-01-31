@@ -1,6 +1,6 @@
 header:
-  - title: blog
-    url: /#blog
+  # - title: blog
+  #   url: /#blog
   - title: CV
     url: "/assets/pdf/cv_sandro.pdf"
     external: True
