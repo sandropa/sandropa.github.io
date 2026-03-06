@@ -9,13 +9,9 @@ permalink: /
 <!-- Adjust width, border-radius, and margins as needed -->
 <!-- For float: left, use margin: 0 1em 1em 0; -->
 
-Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, where we work on automating the creation of ML models for edge devices, mainly for computer vision. I live in Sarajevo and recently completed my Bachelor's in CS at the University of Sarajevo. In high school, I competed in mathematics and now I regularly give lectures to students preparing for competitions.
+Hello, my name is Sandro Paradžik. I am a Machine Learning intern at ModelCat, where we work on automating the creation of ML models for edge devices, mainly for computer vision. I live in Sarajevo and recently completed my Bachelor's in CS at the University of Sarajevo. In high school, I competed in mathematics and now I regularly give lectures to students preparing for competitions. 
 
-### Contact
-
-*   [sandropa@hey.com](mailto:sandropa@hey.com){:target="_blank"}
-*   [GitHub](https://github.com/sandropa){:target="_blank"}
-*   [LinkedIn](https://www.linkedin.com/in/sandropa/){:target="_blank"}
+I am always happy to hear from people, so feel free to reach out at [sandropa@hey.com](mailto:sandropa@hey.com){:target="_blank"}.
 
 ### Favorite Books
 
