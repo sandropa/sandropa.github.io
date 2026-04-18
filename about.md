@@ -9,7 +9,7 @@ permalink: /
 <!-- Adjust width, border-radius, and margins as needed -->
 <!-- For float: left, use margin: 0 1em 1em 0; -->
 
-Hello, my name is Sandro Paradžik. I am interested in AI and machine learning, both in how these technologies are being applied to transform real-world workflows and industries, and in the research that drives them forward. I live in Sarajevo, where I also give lectures to students preparing for math competitions, something I've been doing since my own competing days in high school. I also occasionally write about things I find interesting on [my blog](https://world.hey.com/sandropa).
+Hello, my name is Sandro Paradžik. I love mathematics, especially probability theory, statistics, linear algebra, and combinatorics. I am also very interested in AI and machine learning, both in how these technologies are being applied to transform real-world workflows and industries, and in the research that drives them forward. I live in Sarajevo, where I also give lectures to students preparing for math competitions, something I've been doing since my own competing days in high school. I also occasionally write about things I find interesting on [my blog](https://world.hey.com/sandropa).
 
 I am always happy to hear from people, so feel free to reach out at [sandropa@hey.com](mailto:sandropa@hey.com){:target="_blank"}.
 
