@@ -1,0 +1,6 @@
+<svg class="mark" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <circle cx="20" cy="28" r="16" fill="#e0533d" style="mix-blend-mode: multiply" />
+  <circle cx="36" cy="28" r="16" fill="#2f8a8a" style="mix-blend-mode: multiply" />
+  <circle cx="20" cy="28" r="16" fill="none" stroke="#141414" stroke-width="1.5" />
+  <circle cx="36" cy="28" r="16" fill="none" stroke="#141414" stroke-width="1.5" />
+</svg>

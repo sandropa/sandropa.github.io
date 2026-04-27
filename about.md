@@ -1,122 +1,66 @@
 ---
-layout: article # Or 'article' if you prefer the TeXt styling for it and it fits
-title: About Me
+layout: home
 permalink: /
 ---
 
-<!-- Add this image block -->
-<img src="/assets/images/sandro.jpg" alt="Sandro Paradžik" style="float: right; margin: 0 0 1em 1em; width: 200px; border-radius: 50%;"> 
-<!-- Adjust width, border-radius, and margins as needed -->
-<!-- For float: left, use margin: 0 1em 1em 0; -->
-
-Hello, my name is Sandro Paradžik. I love mathematics, especially probability theory, statistics, linear algebra, and combinatorics. I am also very interested in AI and machine learning, both in how these technologies are being applied to transform real-world workflows and industries, and in the research that drives them forward. I live in Sarajevo, where I also give lectures to students preparing for math competitions, something I've been doing since my own competing days in high school. I also occasionally write about things I find interesting on [my blog](https://world.hey.com/sandropa).
-
-I am always happy to hear from people, so feel free to reach out at [sandropa@hey.com](mailto:sandropa@hey.com){:target="_blank"}.
-
-### Favorite Books
-
-<div class="book-cards-container">
-  <div class="book-card">
-    <img src="/assets/images/book_a_brief_history_of_intelligence.png" alt="Book Cover">
-    <div class="book-info">
-      <p class="book-title">A Brief History of Intelligence</p>
-      <p class="book-author">Max Bennett</p>
-    </div>
+<section class="intro">
+  <div>
+    <p>Hello, my name is Sandro Paradžik. I love mathematics — especially probability theory, statistics, linear algebra, and combinatorics. I am also very interested in AI and machine learning, both in how these technologies are being applied to transform real-world workflows and industries, and in the research that drives them forward.</p>
+    <p>I live in Sarajevo, where I also give lectures to students preparing for math competitions, something I've been doing since my own competing days in high school. I also keep a more personal blog on <a href="https://world.hey.com/sandropa">HEY World</a> — occasional notes and reflections.</p>
+    <p>I am always happy to hear from people — feel free to reach out at <a href="mailto:sandropa@hey.com">sandropa@hey.com</a>.</p>
   </div>
-  <div class="book-card">
-    <img src="/assets/images/book_why_greatness_cannot_be_planned.png" alt="Book Cover">
-    <div class="book-info">
-      <p class="book-title">Why Greatness Cannot Be Planned</p>
-      <p class="book-author">Kenneth O. Stanley, Joel Lehman</p>
-    </div>
-  </div>
-  <div class="book-card">
-    <img src="/assets/images/book_brave_new_world.png" alt="Book Cover">
-    <div class="book-info">
-      <p class="book-title">Brave New World</p>
-      <p class="book-author">Aldous Huxley</p>
-    </div>
-  </div>
-  <div class="book-card">
-    <img src="/assets/images/book_a_thousand_brains.png" alt="Book Cover">
-    <div class="book-info">
-      <p class="book-title">A Thousand Brains</p>
-      <p class="book-author">Jeff Hawkins</p>
-    </div>
-  </div>
-</div>
+  <img class="portrait" src="{{ '/assets/images/sandro.jpg' | relative_url }}" alt="Sandro Paradžik">
+</section>
 
-### Favorite Movies
+{% include writing.html %}
 
-<div class="movie-cards-container">
-  <div class="movie-card">
-    <img src="/assets/images/movie_true_romance_2.png">
-    <div class="movie-info">
-      <p class="movie-title">True Romance</p>
-      <p class="movie-director">Tony Scott</p>
-    </div>
-  </div>
-  <div class="movie-card">
-    <img src="/assets/images/movie_shutter_island.png" alt="Movie Cover">
-    <div class="movie-info">
-      <p class="movie-title">Shutter Island</p>
-      <p class="movie-director">Martin Scorsese</p>
-    </div>
-  </div>
-  <div class="movie-card">
-    <img src="/assets/images/movie_dr_strangelove.png" alt="Movie Cover">
-    <div class="movie-info">
-      <p class="movie-title">Dr. Strangelove</p>
-      <p class="movie-director">Stanley Kubrick</p>
-    </div>
-  </div>
-  <div class="movie-card">
-    <img src="/assets/images/movie_inception.png" alt="Movie Cover">
-    <div class="movie-info">
-      <p class="movie-title">Inception</p>
-      <p class="movie-director">Christopher Nolan</p>
-    </div>
-  </div>
-</div>
-
-### Photographs
-
-I like photography and believe art is very important. Here are some photographs I have taken over the years.
-
-<div class="image-gallery">
+<h2 class="section">favorite books</h2>
+<div class="grid-cards">
   <figure>
-    <img src="/assets/images/photographs/1_tb_bw_rain_small.jpg" alt="photo">
+    <div class="frame"><img src="{{ '/assets/images/book_a_brief_history_of_intelligence.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">A Brief History of Intelligence</div><div class="by">Max Bennett</div></div>
   </figure>
   <figure>
-    <img src="/assets/images/photographs/2021_0505_photo1_small.jpeg" alt="photo">
+    <div class="frame"><img src="{{ '/assets/images/book_why_greatness_cannot_be_planned.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">Why Greatness Cannot Be Planned</div><div class="by">Stanley &amp; Lehman</div></div>
   </figure>
   <figure>
-    <img src="/assets/images/photographs/2021_0505_photo2_small.jpeg" alt="photo">
+    <div class="frame"><img src="{{ '/assets/images/book_brave_new_world.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">Brave New World</div><div class="by">Aldous Huxley</div></div>
   </figure>
   <figure>
-    <img src="/assets/images/photographs/foggy_small.jpg" alt="photo">
-  </figure>
-  <figure>
-    <img src="/assets/images/photographs/mostar1_small.jpg" alt="photo">
-  </figure>
-  <figure>
-    <img src="/assets/images/photographs/sarajevo_cat_1_small.jpg" alt="photo">
-  </figure>
-  <figure>
-    <img src="/assets/images/photographs/skate1_small.jpg" alt="photo">
-  </figure>
-  <figure>
-    <img src="/assets/images/photographs/sarajevo_shadow1.webp" alt="photo">
+    <div class="frame"><img src="{{ '/assets/images/book_a_thousand_brains.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">A Thousand Brains</div><div class="by">Jeff Hawkins</div></div>
   </figure>
 </div>
 
-<!-- ### Blog
-coming soon...
-<ul class="blog-list">
-  {% for post in site.posts %}
-    <li>
-      <span class="post-date">{{ post.date | date: "%b %d, %Y" }}</span>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+<h2 class="section">favorite movies</h2>
+<div class="grid-cards">
+  <figure>
+    <div class="frame"><img src="{{ '/assets/images/movie_true_romance_2.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">True Romance</div><div class="by">Tony Scott</div></div>
+  </figure>
+  <figure>
+    <div class="frame"><img src="{{ '/assets/images/movie_shutter_island.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">Shutter Island</div><div class="by">Martin Scorsese</div></div>
+  </figure>
+  <figure>
+    <div class="frame"><img src="{{ '/assets/images/movie_dr_strangelove.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">Dr. Strangelove</div><div class="by">Stanley Kubrick</div></div>
+  </figure>
+  <figure>
+    <div class="frame"><img src="{{ '/assets/images/movie_inception.png' | relative_url }}" alt=""></div>
+    <div class="meta"><div class="title">Inception</div><div class="by">Christopher Nolan</div></div>
+  </figure>
+</div>
+
+<h2 class="section">photographs</h2>
+<p>I like photography and believe art is very important. Here are some photographs I have taken over the years.</p>
+
+<div class="photos">
+  {% assign photos = "1_tb_bw_rain_small.jpg,2021_0505_photo1_small.jpeg,2021_0505_photo2_small.jpeg,foggy_small.jpg,mostar1_small.jpg,sarajevo_cat_1_small.jpg,skate1_small.jpg,sarajevo_shadow1.webp" | split: "," %}
+  {% for photo in photos %}
+    {% assign src = '/assets/images/photographs/' | append: photo | relative_url %}
+    <figure><a href="{{ src }}" class="lb-link"><img src="{{ src }}" alt=""></a></figure>
   {% endfor %}
-</ul> -->
+</div>

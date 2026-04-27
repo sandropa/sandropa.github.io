@@ -1,0 +1,9 @@
+<h2 class="section">writing</h2>
+<ul class="writing">
+{% for post in site.posts %}
+  <li>
+    <span class="date">{{ post.date | date: "%Y · %m · %d" }}</span>
+    <span class="post-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+  </li>
+{% endfor %}
+</ul>

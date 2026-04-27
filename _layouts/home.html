@@ -1,43 +1,70 @@
----
-layout: articles
-titles:
-  # @start locale config
-  en      : &EN       Home
-  en-GB   : *EN
-  en-US   : *EN
-  en-CA   : *EN
-  en-AU   : *EN
-  zh-Hans : &ZH_HANS  主页
-  zh      : *ZH_HANS
-  zh-CN   : *ZH_HANS
-  zh-SG   : *ZH_HANS
-  zh-Hant : &ZH_HANT  主頁
-  zh-TW   : *ZH_HANT
-  zh-HK   : *ZH_HANT
-  ko      : &KO       홈
-  ko-KR   : *KO
-  fr      : &FR       Accueil
-  fr-BE   : *FR
-  fr-CA   : *FR
-  fr-CH   : *FR
-  fr-FR   : *FR
-  fr-LU   : *FR
-  tr      : &TR       Ana Sayfa
-  # @end locale config
-show_title: false
-articles:
-  data_source: paginator.posts
-  article_type: BlogPosting
-  show_cover: false
-  show_excerpt: true
-  show_readmore: true
-  show_info: true
----
-<div class="layout--home">
-  {%- include paginator.html -%}
-</div>
-<script>
-  {%- include scripts/home.js -%}
-</script>
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="icon" href="{{ '/favicon/favicon.ico' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  {% feed_meta %}
+</head>
+<body>
+<div class="page">
+
+<header class="masthead">
+  <div class="id-block">
+    {% include mark.svg %}
+    <div>
+      <span class="name">sandro paradžik</span>
+      <div class="tagline">math · statistics · ai · sarajevo</div>
+    </div>
+  </div>
+  <nav>
+    <a href="mailto:{{ site.author.email }}">email</a>
+    <a href="https://github.com/{{ site.author.github }}">github</a>
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">linkedin</a>
+  </nav>
+</header>
 
 {{ content }}
+
+<div class="footer">
+  <span>./sandropa.github.io</span>
+  <span>{{ 'now' | date: '%Y' }}</span>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
+  <img id="lb-img" src="" alt="">
+</div>
+
+<script>
+  (function() {
+    var lb = document.getElementById('lb');
+    var lbImg = document.getElementById('lb-img');
+    var lbClose = document.getElementById('lb-close');
+    document.querySelectorAll('.lb-link').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        e.preventDefault();
+        lbImg.src = a.getAttribute('href');
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    function close() {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    lb.addEventListener('click', function(e) { if (e.target === lb || e.target === lbClose) close(); });
+    lbClose.addEventListener('click', close);
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
+  })();
+</script>
+
+</div>
+</body>
+</html>
