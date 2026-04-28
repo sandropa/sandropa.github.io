@@ -17,21 +17,25 @@
 <body class="post-page">
 <div class="page">
 
-<header class="masthead post-masthead">
+<header class="masthead">
   <div class="id-block">
     <a href="{{ '/' | relative_url }}" class="mark-link">{% include mark.svg %}</a>
-    <a href="{{ '/' | relative_url }}" class="name">sandro paradžik</a>
+    <div>
+      <a href="{{ '/' | relative_url }}" class="name">sandro paradžik</a>
+      <div class="tagline">math · statistics · ai · sarajevo</div>
+    </div>
   </div>
   <nav>
-    <a href="{{ '/' | relative_url }}">home</a>
     <a href="mailto:{{ site.author.email }}">email</a>
     <a href="https://github.com/{{ site.author.github }}">github</a>
+    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">linkedin</a>
+    <a href="{{ '/assets/pdf/cv_sandro.pdf' | relative_url }}">cv</a>
   </nav>
 </header>
 
 <article>
-  <div class="post-meta">{{ page.date | date: "%Y · %m · %d" }} · writing</div>
   <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-meta">{{ page.date | date: "%d · %m · %Y" }}</div>
 
   {{ content }}
 
