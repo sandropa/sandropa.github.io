@@ -155,6 +155,25 @@ p { margin: 0 0 1.1em; }
 .writing a { box-shadow: none; }
 .writing a:hover { box-shadow: inset 0 -2px 0 var(--red); }
 
+/* === Feature photo === */
+.feature-photo {
+  margin: 40px 0;
+}
+.feature-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1.5px solid var(--ink);
+}
+.feature-photo figcaption {
+  margin-top: 8px;
+  font-size: 0.78rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+.feature-photo figcaption a { color: var(--muted); }
+.feature-photo figcaption a:hover { color: var(--ink); }
+
 /* === Photographs (masonry via CSS columns) === */
 .photos { columns: 3; column-gap: 14px; }
 .photos figure { margin: 0 0 14px; break-inside: avoid; }

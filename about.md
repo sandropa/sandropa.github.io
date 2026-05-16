@@ -12,6 +12,11 @@ permalink: /
   <img class="portrait" src="{{ '/assets/images/sandro.jpg' | relative_url }}" alt="Sandro Paradžik">
 </section>
 
+<figure class="feature-photo">
+  <img src="{{ '/assets/images/cactus1.jpg' | relative_url }}" alt="CaCTüS 2024 cohort group photo at the Max Planck Institute, Tübingen">
+  <figcaption>The 2024 <a href="https://www.projects.tuebingen.mpg.de/">CaCTüS</a> cohort at the Max Planck Institute in Tübingen — a summer research internship in computation, cognition, and AI.</figcaption>
+</figure>
+
 {% include writing.html %}
 
 <h2 class="section">favorite books</h2>
