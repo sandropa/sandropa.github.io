@@ -14,7 +14,7 @@ If we took \\(n\\) samples, and chose \\(M\\) as the minimum of those samples, w
 
 Solving for \\(n\\),
 
-\\[ n = \lceil \frac{\log(1-p)}{\log(0.9)} \rceil = \lceil \frac{\log(1-0.95)}{\log(0.9)} \rceil = \lceil 28.43 \rceil = 29. \\]
+\\[ n = \left\lceil \frac{\log(1-p)}{\log(0.9)} \right\rceil = \left\lceil \frac{\log(1-0.95)}{\log(0.9)} \right\rceil = \lceil 28.43 \rceil = 29. \\]
 
 We now know that it takes only 29 samples to be 95% confident that 90% of the data is no smaller than the smallest number in the sample. Notice that \\(n\\) depends much more on the percentage of data we want to cover than on the confidence value. For example, we could get 99.9% confidence and 90% coverage with only 66 samples. However, for 95% confidence and 99% coverage, we would need 299 samples.
 
@@ -22,7 +22,7 @@ Is this the best we can do? That depends on how much data we have, and how large
 
 | Outliers discarded | Order statistic _k_ | Required _n_ |
 |:---:|:---:|:---:|
-| 0 | 1 (minimum) | 29 |
+| 0 | 1 | 29 |
 | 1 | 2 | 46 |
 | 2 | 3 | 61 |
 | 3 | 4 | 76 |
