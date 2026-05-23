@@ -64,6 +64,23 @@ a:hover {
 }
 .theme-toggle:hover { color: var(--text); }
 
+.intro {
+  display: flex;
+  gap: 32px;
+  align-items: start;
+  margin-bottom: 48px;
+}
+.intro .bio {
+  margin-bottom: 0;
+}
+.portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
 /* === Home === */
 
 .site-name {
@@ -194,6 +211,7 @@ code {
 /* Responsive */
 @media (max-width: 520px) {
   .page { padding: 48px 20px 80px; }
+  .intro { flex-direction: column-reverse; align-items: center; text-align: center; }
   .posts time { display: block; margin: 0; }
-  .links { gap: 16px; }
+  .links { gap: 16px; justify-content: center; }
 }

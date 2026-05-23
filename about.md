@@ -3,9 +3,13 @@ layout: home
 permalink: /
 ---
 
-<h1 class="site-name">Sandro Paradžik</h1>
-
-<p class="bio">I love mathematics — probability, statistics, linear algebra, combinatorics — and I'm interested in AI and machine learning. I live in Sarajevo, where I also teach students preparing for math competitions.</p>
+<div class="intro">
+  <div>
+    <h1 class="site-name">Sandro Paradžik</h1>
+    <p class="bio">I love mathematics — probability, statistics, linear algebra, combinatorics — and I'm interested in AI and machine learning. I live in Sarajevo, where I also teach students preparing for math competitions.</p>
+  </div>
+  <img class="portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Sandro Paradžik">
+</div>
 
 <ul class="links">
   <li><a href="mailto:sandropa@hey.com">email</a></li>
