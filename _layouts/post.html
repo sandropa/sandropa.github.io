@@ -13,7 +13,9 @@
   {% endif %}
 </head>
 <body>
+{% include theme-toggle.html %}
 <main class="page">
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode"></button>
   <a href="{{ '/' | relative_url }}" class="home-link">Sandro Paradžik</a>
 
   <article>
@@ -28,5 +30,18 @@
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
   onload="renderMathInElement(document.body);"></script>
 {% endif %}
+<script>
+(function() {
+  var t = document.getElementById('theme-toggle');
+  var h = document.documentElement;
+  function update() { t.textContent = h.classList.contains('dark') ? '○' : '●'; }
+  update();
+  t.addEventListener('click', function() {
+    h.classList.toggle('dark');
+    localStorage.setItem('theme', h.classList.contains('dark') ? 'dark' : 'light');
+    update();
+  });
+})();
+</script>
 </body>
 </html>
