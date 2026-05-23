@@ -6,48 +6,22 @@
   <title>{{ page.title }} — {{ site.title }}</title>
   <meta name="description" content="{{ page.excerpt | default: page.title | strip_html | truncate: 160 }}">
   <link rel="icon" href="{{ '/favicon/favicon.ico' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% if page.math %}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
   {% endif %}
 </head>
-<body class="post-page">
-<div class="page">
+<body>
+<main class="page">
+  <a href="{{ '/' | relative_url }}" class="home-link">Sandro Paradžik</a>
 
-<header class="masthead">
-  <div class="id-block">
-    <a href="{{ '/' | relative_url }}" class="mark-link">{% include mark.svg %}</a>
-    <div>
-      <a href="{{ '/' | relative_url }}" class="name">sandro paradžik</a>
-      <div class="tagline">math · statistics · ai · sarajevo</div>
-    </div>
-  </div>
-  <nav>
-    <a href="mailto:{{ site.author.email }}">email</a>
-    <a href="https://github.com/{{ site.author.github }}">github</a>
-    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">linkedin</a>
-    <a href="{{ '/assets/pdf/cv_sandro.pdf' | relative_url }}">cv</a>
-  </nav>
-</header>
-
-<article>
-  <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">{{ page.date | date: "%d · %m · %Y" }}</div>
-
-  {{ content }}
-
-  <a href="{{ '/' | relative_url }}" class="back-link">back home</a>
-</article>
-
-<div class="footer">
-  <span>./sandropa.github.io</span>
-  <span>{{ 'now' | date: '%Y' }}</span>
-</div>
-
-</div>
+  <article>
+    <h1>{{ page.title }}</h1>
+    <time>{{ page.date | date: "%B %-d, %Y" }}</time>
+    {{ content }}
+  </article>
+</main>
 
 {% if page.math %}
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>

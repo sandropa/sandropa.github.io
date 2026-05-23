@@ -6,66 +6,13 @@
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}">
   <link rel="icon" href="{{ '/favicon/favicon.ico' | relative_url }}">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   {% feed_meta %}
 </head>
 <body>
-<div class="page">
-
-<header class="masthead">
-  <div class="id-block">
-    {% include mark.svg %}
-    <div>
-      <span class="name">sandro paradžik</span>
-      <div class="tagline">math · statistics · ai · sarajevo</div>
-    </div>
-  </div>
-  <nav>
-    <a href="mailto:{{ site.author.email }}">email</a>
-    <a href="https://github.com/{{ site.author.github }}">github</a>
-    <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">linkedin</a>
-    <a href="{{ '/assets/pdf/cv_sandro.pdf' | relative_url }}">cv</a>
-  </nav>
-</header>
-
-{{ content }}
-
-<div class="footer">
-  <span>./sandropa.github.io</span>
-  <span>{{ 'now' | date: '%Y' }}</span>
-</div>
-
-<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
-  <button class="lb-close" id="lb-close" aria-label="Close">×</button>
-  <img id="lb-img" src="" alt="">
-</div>
-
-<script>
-  (function() {
-    var lb = document.getElementById('lb');
-    var lbImg = document.getElementById('lb-img');
-    var lbClose = document.getElementById('lb-close');
-    document.querySelectorAll('.lb-link').forEach(function(a) {
-      a.addEventListener('click', function(e) {
-        e.preventDefault();
-        lbImg.src = a.getAttribute('href');
-        lb.classList.add('open');
-        document.body.style.overflow = 'hidden';
-      });
-    });
-    function close() {
-      lb.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-    lb.addEventListener('click', function(e) { if (e.target === lb || e.target === lbClose) close(); });
-    lbClose.addEventListener('click', close);
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') close(); });
-  })();
-</script>
-
-</div>
+<main class="page">
+  {{ content }}
+</main>
 </body>
 </html>
