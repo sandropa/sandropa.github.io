@@ -85,7 +85,9 @@ a:hover {
 
 .site-name {
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   margin: 0 0 40px;
 }
 
@@ -135,7 +137,9 @@ a:hover {
 .home-link {
   display: inline-block;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: var(--faintest);
   text-decoration: none;
   margin: 0 0 64px;
@@ -208,10 +212,38 @@ code {
   border-radius: 3px;
 }
 
+/* Photo strip */
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--faintest);
+  margin: 0 0 16px;
+}
+.photo-strip {
+  overflow: hidden;
+  cursor: grab;
+}
+.photo-strip.grabbing { cursor: grabbing; }
+.photo-strip-inner {
+  display: flex;
+  gap: 10px;
+  will-change: transform;
+}
+.photo-strip img {
+  height: 240px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
 /* Responsive */
 @media (max-width: 520px) {
   .page { padding: 48px 20px 80px; }
   .intro { flex-direction: column-reverse; align-items: center; text-align: center; }
   .posts time { display: block; margin: 0; }
   .links { gap: 16px; justify-content: center; }
+  .photo-strip img { height: 180px; }
 }
