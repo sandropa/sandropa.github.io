@@ -19,6 +19,8 @@ permalink: /
   <li><a href="https://world.hey.com/sandropa">hey world</a></li>
 </ul>
 
+<p class="section-label">writing</p>
+
 <ul class="posts">
   {% for post in site.posts %}
   <li>

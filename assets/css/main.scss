@@ -215,10 +215,11 @@ code {
 /* Photo strip */
 .section-label {
   font-size: 0.75rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--faintest);
-  margin: 0 0 16px;
+  margin: 48px 0 16px;
 }
 .photo-strip {
   overflow: hidden;
