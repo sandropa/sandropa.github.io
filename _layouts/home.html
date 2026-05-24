@@ -34,65 +34,16 @@
   var strip = document.querySelector('.photo-strip');
   if (!strip) return;
   var inner = strip.querySelector('.photo-strip-inner');
-
-  // duplicate images for seamless loop
   inner.innerHTML += inner.innerHTML;
   var setWidth = inner.scrollWidth / 2;
-
   var pos = 0;
-  var speed = 0.3;
-  var dragging = false;
-  var startX = 0;
-  var startPos = 0;
-
-  function wrap() {
-    if (pos < 0) pos += setWidth;
-    if (pos >= setWidth) pos -= setWidth;
-  }
-
-  function render() {
-    wrap();
-    inner.style.transform = 'translateX(' + (-pos) + 'px)';
-  }
-
-  // auto-scroll
-  var raf;
   function tick() {
-    if (!dragging) { pos += speed; render(); }
-    raf = requestAnimationFrame(tick);
+    pos += 0.3;
+    if (pos >= setWidth) pos -= setWidth;
+    inner.style.transform = 'translateX(' + (-pos) + 'px)';
+    requestAnimationFrame(tick);
   }
-  raf = requestAnimationFrame(tick);
-
-  // drag
-  strip.addEventListener('mousedown', function(e) {
-    dragging = true;
-    startX = e.clientX;
-    startPos = pos;
-    strip.classList.add('grabbing');
-  });
-  window.addEventListener('mousemove', function(e) {
-    if (!dragging) return;
-    pos = startPos - (e.clientX - startX);
-    render();
-  });
-  window.addEventListener('mouseup', function() {
-    if (!dragging) return;
-    dragging = false;
-    strip.classList.remove('grabbing');
-  });
-
-  // touch
-  strip.addEventListener('touchstart', function(e) {
-    dragging = true;
-    startX = e.touches[0].clientX;
-    startPos = pos;
-  }, { passive: true });
-  strip.addEventListener('touchmove', function(e) {
-    if (!dragging) return;
-    pos = startPos - (e.touches[0].clientX - startX);
-    render();
-  }, { passive: true });
-  strip.addEventListener('touchend', function() { dragging = false; });
+  requestAnimationFrame(tick);
 })();
 </script>
 </body>

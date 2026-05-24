@@ -223,9 +223,7 @@ code {
 }
 .photo-strip {
   overflow: hidden;
-  cursor: grab;
 }
-.photo-strip.grabbing { cursor: grabbing; }
 .photo-strip-inner {
   display: flex;
   gap: 10px;
@@ -236,8 +234,6 @@ code {
   width: auto;
   flex-shrink: 0;
   display: block;
-  pointer-events: none;
-  user-select: none;
 }
 
 /* Responsive */
