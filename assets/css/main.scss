@@ -92,15 +92,30 @@ a:hover {
 
 .links {
   list-style: none;
-  padding: 0;
-  margin: 0 0 64px;
+  padding: 14px 0;
+  margin: 0 0 48px;
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
   font-size: 0.85rem;
+  justify-content: center;
+}
+.links::before, .links::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 12px;
+  background-color: var(--faint);
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 C4 6, 6 3, 12 3 C18 3, 16 8, 24 7 C30 6, 32 2, 40 3 C48 4, 46 9, 54 8 C60 7, 64 3, 72 4 C78 5, 76 9, 84 8 C90 7, 94 2, 100 3 C106 4, 108 7, 114 7 C117 7, 119 6, 120 6' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-size: 120px 12px;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 C4 6, 6 3, 12 3 C18 3, 16 8, 24 7 C30 6, 32 2, 40 3 C48 4, 46 9, 54 8 C60 7, 64 3, 72 4 C78 5, 76 9, 84 8 C90 7, 94 2, 100 3 C106 4, 108 7, 114 7 C117 7, 119 6, 120 6' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+  mask-repeat: repeat-x;
+  mask-size: 120px 12px;
 }
 .links a {
   color: var(--faint);
+  font-weight: 700;
 }
 .links a:hover {
   color: var(--text);
