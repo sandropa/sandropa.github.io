@@ -6,7 +6,7 @@ permalink: /
 <div class="intro">
   <img class="portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Sandro Paradžik">
   <h1 class="site-name">Sandro Paradžik</h1>
-  <p>Hello, my name is Sandro Paradžik. I am interested in AI/ML and Data Science, and more broadly, I love building things. In mathematics, I especially enjoy combinatorics, linear algebra, probability, and statistics.</p>
+  <p>Hello, my name is Sandro Paradžik. I am interested in AI/ML and Data Science, and more broadly, I love building things. In mathematics, I especially enjoy combinatorics, probability, and statistics.</p>
   <p>I studied Computer Science in Sarajevo. I've done internships in AI/ML, including a research internship at the Max Planck Institute in Tübingen. I also teach students preparing for math competitions, and I find that work deeply rewarding.</p>
   <p>Here I share thoughts on math, AI, and tech. You can also find some of my photography on this website.</p>
   <p>I am always happy to hear from people. Feel free to reach out at <a href="mailto:sandropa@hey.com">sandropa@hey.com</a>.</p>
