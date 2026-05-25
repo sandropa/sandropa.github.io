@@ -32,11 +32,21 @@ permalink: /
 </ul>
 
 <p class="section-label">photographs</p>
-<div class="photo-strip">
-  <div class="photo-strip-inner">
-    {% assign photos = "foggy_small.jpg,1_tb_bw_rain_small.jpg,sarajevo_cat_1_small.jpg,skate1_small.jpg,2021_0505_photo1_small.jpeg,mostar1_small.jpg,2021_0505_photo2_small.jpeg,sarajevo_shadow1.webp" | split: "," %}
-    {% for photo in photos %}
-      <img src="{{ '/assets/images/photographs/' | append: photo | relative_url }}" alt="">
-    {% endfor %}
+<div class="gallery">
+  <div class="gallery-pair">
+    <img style="flex: 1" src="{{ '/assets/images/photographs/1_tb_bw_rain_small.jpg' | relative_url }}" alt="">
+    <img style="flex: 1.56" src="{{ '/assets/images/photographs/foggy_small.jpg' | relative_url }}" alt="">
+  </div>
+  <div class="gallery-pair">
+    <img style="flex: 1.78" src="{{ '/assets/images/photographs/skate1_small.jpg' | relative_url }}" alt="">
+    <img style="flex: 1.33" src="{{ '/assets/images/photographs/sarajevo_shadow1.webp' | relative_url }}" alt="">
+  </div>
+  <div class="gallery-pair">
+    <img style="flex: 1" src="{{ '/assets/images/photographs/2021_0505_photo1_small.jpeg' | relative_url }}" alt="">
+    <img style="flex: 1.5" src="{{ '/assets/images/photographs/sarajevo_cat_1_small.jpg' | relative_url }}" alt="">
+  </div>
+  <div class="gallery-pair">
+    <img style="flex: 1.33" src="{{ '/assets/images/photographs/mostar1_small.jpg' | relative_url }}" alt="">
+    <img style="flex: 1.5" src="{{ '/assets/images/photographs/2021_0505_photo2_small.jpeg' | relative_url }}" alt="">
   </div>
 </div>

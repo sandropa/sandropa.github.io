@@ -29,22 +29,5 @@
   });
 })();
 </script>
-<script>
-(function() {
-  var strip = document.querySelector('.photo-strip');
-  if (!strip) return;
-  var inner = strip.querySelector('.photo-strip-inner');
-  inner.innerHTML += inner.innerHTML;
-  var setWidth = inner.scrollWidth / 2;
-  var pos = 0;
-  function tick() {
-    pos += 0.3;
-    if (pos >= setWidth) pos -= setWidth;
-    inner.style.transform = 'translateX(' + (-pos) + 'px)';
-    requestAnimationFrame(tick);
-  }
-  requestAnimationFrame(tick);
-})();
-</script>
 </body>
 </html>

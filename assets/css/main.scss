@@ -207,7 +207,7 @@ code {
   border-radius: 3px;
 }
 
-/* Photo strip */
+/* Gallery */
 .section-label {
   font-size: 0.75rem;
   font-weight: 700;
@@ -216,18 +216,17 @@ code {
   color: var(--faintest);
   margin: 48px 0 16px;
 }
-.photo-strip {
-  overflow: hidden;
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
-.photo-strip-inner {
+.gallery-pair {
   display: flex;
   gap: 10px;
-  will-change: transform;
 }
-.photo-strip img {
-  height: 240px;
-  width: auto;
-  flex-shrink: 0;
+.gallery-pair img {
+  min-width: 0;
   display: block;
 }
 
@@ -237,5 +236,5 @@ code {
   .portrait { width: 90px; height: 90px; }
   .posts time { display: block; margin: 0; }
   .links { gap: 16px; justify-content: center; }
-  .photo-strip img { height: 180px; }
+  .gallery-pair { flex-direction: column; }
 }
