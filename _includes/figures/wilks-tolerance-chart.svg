@@ -1,0 +1,172 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 720px; display: block; margin: 1.2em auto 2em;" role="img" aria-label="Line chart showing required sample size n as a function of order statistic k for different confidence and coverage levels">
+  <style>
+    .chart-text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; fill: var(--text); }
+    .chart-axis { stroke: var(--text); stroke-width: 1.5; fill: none; }
+    .chart-grid { stroke: var(--border); stroke-width: 1; fill: none; }
+    .chart-line { fill: none; stroke: var(--text); stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    .chart-line-dashed { stroke-dasharray: 8, 6; }
+    .chart-line-dotted { stroke-dasharray: 2, 5; }
+    .chart-dot { fill: var(--bg); stroke: var(--text); stroke-width: 1.8; }
+    .chart-title { font-size: 13px; font-weight: 600; fill: var(--text); }
+    .chart-legend { font-size: 11px; fill: var(--text); }
+  </style>
+
+  <!-- Grid -->
+  <g class="chart-grid">
+    <line x1="70" y1="360" x2="640" y2="360"/>
+    <line x1="70" y1="315" x2="640" y2="315"/>
+    <line x1="70" y1="270" x2="640" y2="270"/>
+    <line x1="70" y1="225" x2="640" y2="225"/>
+    <line x1="70" y1="180" x2="640" y2="180"/>
+    <line x1="70" y1="135" x2="640" y2="135"/>
+    <line x1="70" y1="90" x2="640" y2="90"/>
+    <line x1="70" y1="90" x2="70" y2="360"/>
+    <line x1="100" y1="90" x2="100" y2="360"/>
+    <line x1="130" y1="90" x2="130" y2="360"/>
+    <line x1="160" y1="90" x2="160" y2="360"/>
+    <line x1="190" y1="90" x2="190" y2="360"/>
+    <line x1="220" y1="90" x2="220" y2="360"/>
+    <line x1="250" y1="90" x2="250" y2="360"/>
+    <line x1="280" y1="90" x2="280" y2="360"/>
+    <line x1="310" y1="90" x2="310" y2="360"/>
+    <line x1="340" y1="90" x2="340" y2="360"/>
+    <line x1="370" y1="90" x2="370" y2="360"/>
+    <line x1="400" y1="90" x2="400" y2="360"/>
+    <line x1="430" y1="90" x2="430" y2="360"/>
+    <line x1="460" y1="90" x2="460" y2="360"/>
+    <line x1="490" y1="90" x2="490" y2="360"/>
+    <line x1="520" y1="90" x2="520" y2="360"/>
+    <line x1="550" y1="90" x2="550" y2="360"/>
+    <line x1="580" y1="90" x2="580" y2="360"/>
+    <line x1="610" y1="90" x2="610" y2="360"/>
+    <line x1="640" y1="90" x2="640" y2="360"/>
+  </g>
+
+  <!-- Axes -->
+  <polyline class="chart-axis" points="70,360 640,360"/>
+  <polyline class="chart-axis" points="70,360 70,90"/>
+
+  <!-- Labels -->
+  <g class="chart-text" text-anchor="end">
+    <text x="62" y="364">0</text>
+    <text x="62" y="319">100</text>
+    <text x="62" y="274">200</text>
+    <text x="62" y="229">300</text>
+    <text x="62" y="184">400</text>
+    <text x="62" y="139">500</text>
+    <text x="62" y="94">600</text>
+  </g>
+  <g class="chart-text" text-anchor="middle">
+    <text x="70" y="382">1</text>
+    <text x="100" y="382">2</text>
+    <text x="130" y="382">3</text>
+    <text x="160" y="382">4</text>
+    <text x="190" y="382">5</text>
+    <text x="220" y="382">6</text>
+    <text x="250" y="382">7</text>
+    <text x="280" y="382">8</text>
+    <text x="310" y="382">9</text>
+    <text x="340" y="382">10</text>
+    <text x="370" y="382">11</text>
+    <text x="400" y="382">12</text>
+    <text x="430" y="382">13</text>
+    <text x="460" y="382">14</text>
+    <text x="490" y="382">15</text>
+    <text x="520" y="382">16</text>
+    <text x="550" y="382">17</text>
+    <text x="580" y="382">18</text>
+    <text x="610" y="382">19</text>
+    <text x="640" y="382">20</text>
+  </g>
+
+  <!-- Axis titles -->
+  <text x="355" y="405" text-anchor="middle" class="chart-title">Order statistic k</text>
+  <text x="22" y="225" text-anchor="middle" class="chart-title" transform="rotate(-90 22 225)">Required sample size n</text>
+
+  <!-- 95% confidence, 90% coverage -->
+  <polyline class="chart-line" points="70,346.95 100,339.3 130,332.55 160,325.8 190,319.95 220,313.65 250,307.8 280,301.95 310,296.1 340,290.7 370,284.85 400,279.45 430,274.05 460,268.65 490,263.25 520,257.85 550,252.45 580,247.05 610,241.65 640,236.25"/>
+  <g class="chart-dot">
+    <circle cx="70" cy="346.95" r="2.5"/>
+    <circle cx="100" cy="339.3" r="2.5"/>
+    <circle cx="130" cy="332.55" r="2.5"/>
+    <circle cx="160" cy="325.8" r="2.5"/>
+    <circle cx="190" cy="319.95" r="2.5"/>
+    <circle cx="220" cy="313.65" r="2.5"/>
+    <circle cx="250" cy="307.8" r="2.5"/>
+    <circle cx="280" cy="301.95" r="2.5"/>
+    <circle cx="310" cy="296.1" r="2.5"/>
+    <circle cx="340" cy="290.7" r="2.5"/>
+    <circle cx="370" cy="284.85" r="2.5"/>
+    <circle cx="400" cy="279.45" r="2.5"/>
+    <circle cx="430" cy="274.05" r="2.5"/>
+    <circle cx="460" cy="268.65" r="2.5"/>
+    <circle cx="490" cy="263.25" r="2.5"/>
+    <circle cx="520" cy="257.85" r="2.5"/>
+    <circle cx="550" cy="252.45" r="2.5"/>
+    <circle cx="580" cy="247.05" r="2.5"/>
+    <circle cx="610" cy="241.65" r="2.5"/>
+    <circle cx="640" cy="236.25" r="2.5"/>
+  </g>
+
+  <!-- 95% confidence, 95% coverage -->
+  <polyline class="chart-line chart-line-dashed" points="70,333.45 100,318.15 130,304.2 160,291.15 190,278.55 220,266.4 250,254.7 280,243.0 310,231.3 340,220.05 370,208.8 400,197.55 430,186.3 460,175.5 490,164.7 520,153.9 550,143.1 580,132.3 610,121.5 640,110.7"/>
+  <g class="chart-dot">
+    <circle cx="70" cy="333.45" r="2.5"/>
+    <circle cx="100" cy="318.15" r="2.5"/>
+    <circle cx="130" cy="304.2" r="2.5"/>
+    <circle cx="160" cy="291.15" r="2.5"/>
+    <circle cx="190" cy="278.55" r="2.5"/>
+    <circle cx="220" cy="266.4" r="2.5"/>
+    <circle cx="250" cy="254.7" r="2.5"/>
+    <circle cx="280" cy="243.0" r="2.5"/>
+    <circle cx="310" cy="231.3" r="2.5"/>
+    <circle cx="340" cy="220.05" r="2.5"/>
+    <circle cx="370" cy="208.8" r="2.5"/>
+    <circle cx="400" cy="197.55" r="2.5"/>
+    <circle cx="430" cy="186.3" r="2.5"/>
+    <circle cx="460" cy="175.5" r="2.5"/>
+    <circle cx="490" cy="164.7" r="2.5"/>
+    <circle cx="520" cy="153.9" r="2.5"/>
+    <circle cx="550" cy="143.1" r="2.5"/>
+    <circle cx="580" cy="132.3" r="2.5"/>
+    <circle cx="610" cy="121.5" r="2.5"/>
+    <circle cx="640" cy="110.7" r="2.5"/>
+  </g>
+
+  <!-- 99% confidence, 90% coverage -->
+  <polyline class="chart-line chart-line-dotted" points="70,340.2 100,331.2 130,323.55 160,316.35 190,309.15 220,302.85 250,296.1 280,289.8 310,283.5 340,277.65 370,271.35 400,265.5 430,259.65 460,253.8 490,247.95 520,242.1 550,236.25 580,230.85 610,225.0 640,219.6"/>
+  <g class="chart-dot">
+    <circle cx="70" cy="340.2" r="2.5"/>
+    <circle cx="100" cy="331.2" r="2.5"/>
+    <circle cx="130" cy="323.55" r="2.5"/>
+    <circle cx="160" cy="316.35" r="2.5"/>
+    <circle cx="190" cy="309.15" r="2.5"/>
+    <circle cx="220" cy="302.85" r="2.5"/>
+    <circle cx="250" cy="296.1" r="2.5"/>
+    <circle cx="280" cy="289.8" r="2.5"/>
+    <circle cx="310" cy="283.5" r="2.5"/>
+    <circle cx="340" cy="277.65" r="2.5"/>
+    <circle cx="370" cy="271.35" r="2.5"/>
+    <circle cx="400" cy="265.5" r="2.5"/>
+    <circle cx="430" cy="259.65" r="2.5"/>
+    <circle cx="460" cy="253.8" r="2.5"/>
+    <circle cx="490" cy="247.95" r="2.5"/>
+    <circle cx="520" cy="242.1" r="2.5"/>
+    <circle cx="550" cy="236.25" r="2.5"/>
+    <circle cx="580" cy="230.85" r="2.5"/>
+    <circle cx="610" cy="225.0" r="2.5"/>
+    <circle cx="640" cy="219.6" r="2.5"/>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(85, 110)">
+    <line x1="0" y1="0" x2="28" y2="0" class="chart-line"/>
+    <text x="36" y="4" class="chart-legend">95% confidence, 90% coverage</text>
+
+    <line x1="0" y1="22" x2="28" y2="22" class="chart-line chart-line-dashed"/>
+    <text x="36" y="26" class="chart-legend">95% confidence, 95% coverage</text>
+
+    <line x1="0" y1="44" x2="28" y2="44" class="chart-line chart-line-dotted"/>
+    <text x="36" y="48" class="chart-legend">99% confidence, 90% coverage</text>
+  </g>
+</svg>

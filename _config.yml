@@ -1,0 +1,37 @@
+title: Sandro Paradžik
+description: Personal site of Sandro Paradžik — math, statistics, AI, Sarajevo.
+url: https://sandropa.github.io
+baseurl: ""
+lang: en
+
+author:
+  name: Sandro Paradžik
+  email: sandropa@hey.com
+  github: sandropa
+  linkedin: sandropa
+
+markdown: kramdown
+kramdown:
+  math_engine: null
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+permalink: /writing/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

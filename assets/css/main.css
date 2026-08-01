@@ -1,0 +1,262 @@
+/* ============================================================
+   CONFIG — design tokens
+   Change these values to re-skin the entire site.
+   ============================================================ */
+:root {
+  /* Colors — light theme (inspired by dhh.dk) */
+  --bg:           #f6f5ed;
+  --text:         #484848;
+  --faint:        #999892;
+  --link-accent:  #C30C0C;
+  --code-bg:      #efeee6;
+
+  /* Typography */
+  --font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  --font-size:   18px;
+  --line-height: 1.45;
+
+  /* Layout */
+  --page-width:   640px;
+  --page-padding-x: 24px;
+  --page-padding-top: 80px;
+  --page-padding-bottom: 120px;
+
+  /* Spacing scale */
+  --space-xs:  8px;
+  --space-sm:  12px;
+  --space-md:  16px;
+  --space-lg:  24px;
+  --space-xl:  48px;
+  --space-2xl: 64px;
+
+  /* Radius */
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+  --radius-full: 50%;
+
+  /* Portrait */
+  --portrait-size: 140px;
+
+  /* Squiggly line separator (used on .links) */
+  --squiggly: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='12' viewBox='0 0 120 12'%3E%3Cpath d='M0 6 C4 6, 6 3, 12 3 C18 3, 16 8, 24 7 C30 6, 32 2, 40 3 C48 4, 46 9, 54 8 C60 7, 64 3, 72 4 C78 5, 76 9, 84 8 C90 7, 94 2, 100 3 C106 4, 108 7, 114 7 C117 7, 119 6, 120 6' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ============================================================
+   BASE — reset, body, links
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; }
+
+body {
+  font-family: var(--font-family);
+  background: var(--bg);
+  color: var(--text);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ============================================================
+   LAYOUT — page container, theme toggle
+   ============================================================ */
+.page {
+  max-width: var(--page-width);
+  margin: 0 auto;
+  padding: var(--page-padding-top) var(--page-padding-x) var(--page-padding-bottom);
+}
+
+/* ============================================================
+   HOME — intro, portrait, links, writing list
+   ============================================================ */
+.intro {
+  margin-bottom: var(--space-xl);
+}
+
+.portrait {
+  width: var(--portrait-size);
+  height: var(--portrait-size);
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  float: right;
+  margin: 0 0 var(--space-sm) var(--space-md);
+}
+
+.site-name {
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+.links {
+  list-style: none;
+  padding: 14px 0;
+  margin: 0 0 var(--space-xl);
+  display: flex;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.links::before, .links::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 12px;
+  background-color: var(--faint);
+  -webkit-mask-image: var(--squiggly);
+  -webkit-mask-repeat: repeat-x;
+  -webkit-mask-size: 120px 12px;
+  mask-image: var(--squiggly);
+  mask-repeat: repeat-x;
+  mask-size: 120px 12px;
+}
+.links a {
+  font-weight: 400;
+  color: var(--link-accent);
+}
+
+/* ============================================================
+   POSTS — writing list (home) and article (post page)
+   ============================================================ */
+.posts {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.posts li {
+  margin: 0 0 var(--space-sm);
+}
+.posts time {
+  color: var(--text);
+  font-size: 0.85rem;
+  margin-right: var(--space-md);
+}
+
+
+/* ============================================================
+   ARTICLE — post page typography
+   ============================================================ */
+article h1 {
+  font-size: 2.1rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 20px;
+}
+
+article h2 {
+  font-size: 1.33rem;
+  font-weight: 400;
+  margin: 40px 0 5px;
+}
+
+article .byline {
+  margin: 0 0 var(--space-xl);
+}
+
+article .byline a {
+  color: inherit;
+}
+
+article p {
+  margin: 0 0 1.4em;
+}
+
+.intro a {
+  color: var(--link-accent);
+}
+
+/* Math (KaTeX) */
+.katex { font-size: 1.05em; }
+.katex-display {
+  margin: 2em 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
+}
+
+/* Tables */
+article table {
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin: 2em 0;
+  width: 100%;
+}
+article th, article td {
+  border-bottom: 1px solid var(--text);
+  padding: 10px var(--space-md);
+  text-align: left;
+}
+article th {
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  border-bottom: 2px solid var(--text);
+}
+
+/* Inline code */
+code {
+  font-family: inherit;
+  font-size: 0.92em;
+  background: var(--code-bg);
+  padding: 2px 5px;
+  border-radius: var(--radius-sm);
+}
+
+/* ============================================================
+   GALLERY — photo grid (home) and photographs page
+   ============================================================ */
+.section-label {
+  font-size: 1.33rem;
+  font-weight: 400;
+  color: var(--text);
+  margin: 40px 0 5px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gallery-pair {
+  display: flex;
+  gap: 10px;
+}
+.gallery-pair img {
+  min-width: 0;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+/* Photographs page — full-width image stack */
+.photos {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+.photos img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-lg);
+}
+
+/* ============================================================
+   RESPONSIVE — mobile adjustments
+   ============================================================ */
+@media (max-width: 520px) {
+  .page { padding: var(--space-xl) 20px 80px; }
+  .portrait { width: 110px; height: 110px; }
+  .posts time { margin-right: var(--space-xs); }
+  .links { gap: var(--space-md); justify-content: center; }
+  .gallery-pair { flex-direction: column; }
+}
