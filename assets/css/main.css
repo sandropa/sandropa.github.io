@@ -151,10 +151,16 @@ article h1 {
   margin: 0 0 20px;
 }
 
-article h2 {
-  font-size: 1.33rem;
+article h2, .section-label {
+  font-size: 24px;
   font-weight: 400;
   margin: 40px 0 5px;
+}
+
+article h3 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0 5px;
 }
 
 article .byline {
@@ -212,16 +218,47 @@ code {
   border-radius: var(--radius-sm);
 }
 
+/* Code blocks */
+article pre {
+  position: relative;
+  font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  background: var(--code-bg);
+  border: 1.5px solid var(--link-accent);
+  padding: var(--space-md);
+  border-radius: var(--radius-md);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  margin: 0 0 1.4em;
+}
+article pre code {
+  background: none;
+  padding: 0;
+  font-size: inherit;
+}
+
+/* Copy button (added by JS in default.html) */
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  color: var(--faint);
+  background: var(--code-bg);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+.copy-btn:hover, .copy-btn.copied {
+  color: var(--link-accent);
+}
+
 /* ============================================================
    GALLERY — photo grid (home) and photographs page
    ============================================================ */
-.section-label {
-  font-size: 1.33rem;
-  font-weight: 400;
-  color: var(--text);
-  margin: 40px 0 5px;
-}
-
 .gallery {
   display: flex;
   flex-direction: column;

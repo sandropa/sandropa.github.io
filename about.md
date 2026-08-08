@@ -20,7 +20,7 @@ permalink: /
   <!-- <li><a href="https://world.hey.com/sandropa" target="_blank">hey world</a></li> -->
 </ul>
 
-<p class="section-label">Writing</p>
+<h2 class="section-label">Writing</h2>
 
 <ul class="posts">
   {% for post in site.posts %}
@@ -31,7 +31,7 @@ permalink: /
   {% endfor %}
 </ul>
 
-<p class="section-label">Photographs</p>
+<h2 class="section-label">Photographs</h2>
 <div class="gallery">
   <div class="gallery-pair">
     <img style="flex: 1" src="{{ '/assets/images/photographs/1_tb_bw_rain_small.jpg' | relative_url }}" alt="">
