@@ -7,7 +7,7 @@ permalink: /
   <h1 class="site-name">SANDRO PARADŽIK</h1>
   <img class="portrait" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Sandro Paradžik">
   <p>Hello, my name is Sandro Paradžik. I am interested in AI/ML and Data Science, and more broadly, I love building things. In mathematics, I especially enjoy combinatorics, probability, and statistics.</p>
-  <p>I studied Computer Science in Sarajevo. I've done internships in AI/ML, including a research internship at the Max Planck Institute in Tübingen. I also teach students preparing for math competitions, and I find that work deeply rewarding.</p>
+  <p>I studied Computer Science in Sarajevo. I currently work as a Data Scientist at <a href="https://lebesgue.io" target="_blank">Lebesgue</a>, based in Zagreb. Before that, I did internships in AI/ML, including a research internship at the Max Planck Institute in Tübingen. I also teach students preparing for math competitions, and I find that work deeply rewarding.</p>
   <p>Here I share thoughts on math, AI, and tech. You can also find some of my photography on this website.</p>
   <p>I am always happy to hear from people. Feel free to reach out at <a href="mailto:sandropa@hey.com">sandropa@hey.com</a>.</p>
 </div>
