@@ -3,17 +3,17 @@
    Change these values to re-skin the entire site.
    ============================================================ */
 :root {
-  /* Colors — light theme (inspired by dhh.dk) */
-  --bg:           #f6f5ed;
-  --text:         #484848;
-  --faint:        #999892;
-  --link-accent:  #C30C0C;
-  --code-bg:      #efeee6;
+  /* Colors — light theme (inspired by pietromiotti.com) */
+  --bg:           #fdfdfd;
+  --text:         #333333;
+  --faint:        #888888;
+  --link-accent:  #0056b3;
+  --code-bg:      #f4f4f4;
 
   /* Typography */
-  --font-family: Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
-  --font-size:   18px;
-  --line-height: 1.45;
+  --font-family: 'EB Garamond', Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif;
+  --font-size:   19px;
+  --line-height: 1.6;
 
   /* Layout */
   --page-width:   640px;
