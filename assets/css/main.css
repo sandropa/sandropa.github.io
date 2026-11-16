@@ -149,6 +149,35 @@ article h1 {
   margin: 0 0 20px;
 }
 
+article figure { margin: 1.6em 0 2em; }
+article .cmp { margin: 1.6em 0 0.4em; }
+article .cmp-pick { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+article .cmp-pick button { font: inherit; font-size: 0.8rem; padding: 2px 12px; border-radius: 999px; border: 1px solid var(--faint);
+  background: none; color: var(--text); cursor: pointer; }
+article .cmp-pick button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+article .cmp-table { font-size: 0.8rem; font-variant-numeric: tabular-nums; }
+article .cmp-table th, article .cmp-table td { padding: 8px 6px; white-space: nowrap; }
+article .cmp-table td:first-child { white-space: normal; }
+article .cmp-table b { font-weight: 700; }
+article .cmp-table tr.cmp-avg td { border-top: 1.5px solid var(--text); }
+article .algorithm { border-top: 2px solid var(--text); border-bottom: 1px solid var(--text); padding: 0.5em 0 0.6em; margin: 1.6em 0 2em; }
+article .algorithm p { margin: 0.35em 0; }
+article .algorithm .algo-title { border-bottom: 1px solid var(--text); padding-bottom: 0.35em; margin-bottom: 0.5em; }
+article .algorithm ol { margin: 0.3em 0 0.2em; padding-left: 2.2em; }
+article .algorithm li { margin: 0.2em 0; }
+article .algorithm pre.algo { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 0.78rem; line-height: 1.8;
+  background: none; border: none; padding: 0.2em 0 0; margin: 0; white-space: pre; overflow-x: auto; color: var(--text); }
+article .algorithm pre.algo b { font-weight: 700; }
+article .algorithm pre.algo i { font-style: italic; }
+article .algorithm pre.algo .c { color: var(--faint); }
+article .algorithm pre.algo .n { color: var(--faint); }
+article .algorithm pre.algo .arr { font-family: "STIX Two Math", "Apple Symbols", "Cambria Math", "Segoe UI Symbol", serif;
+  font-size: 1.25em; line-height: 0; position: relative; top: -0.16em; }
+article figure > svg { margin: 0 auto 0.6em !important; }
+article figure > svg.fig-head { margin-bottom: 0 !important; }   /* legend / title rows sitting right on top of a video */
+article figcaption, article .caption { font-size: 0.85rem; line-height: 1.45; color: var(--text); text-wrap: pretty; }   /* no one-word last lines */
+article .caption { margin: 0.6em 0 2em; }
+
 article h2, .section-label {
   font-size: 24px;
   font-weight: 700;

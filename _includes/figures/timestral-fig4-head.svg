@@ -1,0 +1,15 @@
+<svg class="fig-head" viewBox="0 0 600 20" xmlns="http://www.w3.org/2000/svg" style="width: 100%; max-width: 600px; display: block; margin: 0 auto;" role="img" aria-label="Legend: training, validation and test data">
+  <style>
+    .t { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 13px; fill: var(--text); }
+    .t-small { font-size: 12px; }
+    .t-faint { fill: var(--faint, #888); }
+    .axis { stroke: var(--text); stroke-width: 1.2; fill: none; }
+    .grid { stroke: var(--border, #e5e5e5); stroke-width: 1; fill: none; }
+  </style>
+  <rect x="0.0" y="5" width="12" height="10" fill="#0056b3" fill-opacity="0.25"/>
+  <text class="t t-small t-faint" x="17.0" y="14">training</text>
+  <rect x="85.8" y="5" width="12" height="10" fill="#c2571a" fill-opacity="0.40"/>
+  <text class="t t-small t-faint" x="102.8" y="14">validation</text>
+  <rect x="184.8" y="5" width="12" height="10" fill="#2e8b57" fill-opacity="0.33"/>
+  <text class="t t-small t-faint" x="201.8" y="14">test</text>
+</svg>
