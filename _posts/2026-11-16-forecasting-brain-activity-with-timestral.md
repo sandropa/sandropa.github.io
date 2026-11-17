@@ -1,5 +1,5 @@
 ---
-title: Neural Forecasting with Timestral
+title: Forecasting Brain Activity with Timestral
 date: 2026-11-16
 ---
 
