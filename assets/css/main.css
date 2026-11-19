@@ -155,6 +155,9 @@ article .cmp-pick { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10p
 article .cmp-pick button { font: inherit; font-size: 0.8rem; padding: 2px 12px; border-radius: 999px; border: 1px solid var(--faint);
   background: none; color: var(--text); cursor: pointer; }
 article .cmp-pick button[aria-pressed="true"] { background: var(--text); color: var(--bg); border-color: var(--text); }
+article .cmp-pick.compact { gap: 4px; justify-content: center; }
+article .cmp-pick.compact button { font-size: 0.74rem; padding: 2px 8px; }
+@media (min-width: 640px) { article .cmp-pick.compact { flex-wrap: nowrap; } }
 article .cmp-table { font-size: 0.8rem; font-variant-numeric: tabular-nums; }
 article .cmp-table th, article .cmp-table td { padding: 8px 6px; white-space: nowrap; }
 article .cmp-table td:first-child { white-space: normal; }
